@@ -1,15 +1,14 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "geekmasher-dev",
   "description": "GeekMasher's Developer and Security blog",
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build",
-    
-    "deploy-prod": "gatsby build --prefix-paths && now -e NODE_ENV=production",
-    "deploy-local": "gatsby build --prefix-paths && now dev",
-    
+    "build": "gatsby build --prefix-paths",
+    "now-build": "npm run build",
+    "deploy-prod": "now --target production",
+    "deploy-local": "now dev",
     "clean": "rm -r .cache public",
     "lint:js": "eslint --cache --ext .js,.jsx .",
     "lint:scss": "stylelint \"src/**/*.scss\"",
@@ -45,8 +44,6 @@
     "gatsby-plugin-flow": "^1.0.6",
     "gatsby-plugin-google-gtag": "^1.0.17",
     "gatsby-plugin-manifest": "^2.1.1",
-    "gatsby-plugin-netlify": "^2.0.17",
-    "gatsby-plugin-netlify-cms": "^3.0.18",
     "gatsby-plugin-offline": "^2.1.3",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
@@ -67,7 +64,6 @@
     "katex": "^0.10.2",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
-    "netlify-cms": "^2.9.1",
     "node-sass": "^4.12.0",
     "normalize-scss": "^7.0.1",
     "prismjs": "^1.16.0",
