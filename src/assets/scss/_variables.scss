@@ -5,7 +5,8 @@
 // Colors
 $color-base: #3a3a3a;
 $color-primary: #8ac149;
-$color-secondary: #8ac149;
+$color-secondary: darken(#8ac149, 10%);
+$color-tags:  #086392;
 
 $color-white: #FFF;
 $color-gray: lighten($color-base, 40%);
