@@ -1,0 +1,33 @@
+'use strict';
+
+module.exports = {
+  url: 'https://geekmasher.dev',
+  title: 'GeekMasher\'s Blog',
+  subtitle: 'Development and Security focused blog by GeekMasher',
+  copyright: '© All rights reserved.',
+  disqusShortname: '',
+  postsPerPage: 4,
+  menu: [
+    {
+      label: 'Articles',
+      path: '/'
+    },
+    {
+      label: 'About me',
+      path: '/pages/about'
+    },
+    {
+      label: 'Categories',
+      path: '/categories'
+    }
+  ],
+  author: {
+    name: 'Mathew Payne',
+    photo: '/photo.jpg',
+    bio: 'All things development and security focused brought to you by me.',
+    contacts: {
+      twitter: 'geekmasher',
+      github: 'geekmasher'
+    }
+  }
+};
