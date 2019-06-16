@@ -24,7 +24,11 @@ This is my first post on my newly created blog at [https://geekmasher.dev](https
 
 A few months ago, I discovered that [Google allows you to register .dev domains](https://domains.google/tld/dev/) and I jumped at the opportunity.
 
+<<<<<<< HEAD
 I have a few domains under my name but this one is by far the coolest and well suited to the goal of my blog posts.
+=======
+I have a few domains under mu name but this one is by far the coolest and well suited to the goal of my blog posts.
+>>>>>>> 250b847335caeae83b3c9800cf6702e299e70b67
 
 ## Using `gatsbyjs`
 
