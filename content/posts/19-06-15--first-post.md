@@ -12,4 +12,7 @@ tags:
 description: "This is my first post on my newly created blog at geekmasher.dev, please join my journey towards becoming a better developer and security engineer."
 ---
 
-Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.
+![GeekMashers first post on geekmasher.dev](/media/first-blog-banner-geekmasher.jpg)
+<!-- https://elements.envato.com/blog-word-and-newspapers-PC6AD5P -->
+
+This is my first post on my newly created blog at [https://geekmasher.dev](https://geekmasher.dev), please join my journey towards becoming a better developer and security engineer.
