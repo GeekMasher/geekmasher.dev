@@ -17,6 +17,10 @@ module.exports = {
       path: '/pages/about'
     },
     {
+      label: 'Meetups/Conferences',
+      path: '/pages/meetups/index'
+    },
+    {
       label: 'Categories',
       path: '/categories'
     }
