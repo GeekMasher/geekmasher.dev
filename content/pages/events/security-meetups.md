@@ -1,11 +1,11 @@
 ---
-title: "Security Meetups/Conferences"
+title: "Security Meetups"
 template: "page"
 ---
 
-One of the things I love doing in the evenings is going to meetups and annually to conferences so here is the list I have on security focused events.
+## Meetups
 
-## Meetups (Monthly/Quarterly events)
+One of the things I love doing in the evenings is going to meetups and annually to conferences so here is the list I have on security focused events.
 
 ### London, UK
 
@@ -38,20 +38,3 @@ One of the things I love doing in the evenings is going to meetups and annually 
 | Name of Meetup                                                                 | Frequency | Description                     |
 | :----------------------------------------------------------------------------- | :-------: | :------------------------------ |
 | [SecParis: Security Meetups in Paris](https://www.meetup.com/SecParis-Meetup/) |  Monthly  | Security focused event in Paris |
-
-## Conferences (Annually events)
-
-| Name of Meetup                          | Location  | Description                              |
-| :-------------------------------------- | :-------: | :--------------------------------------- |
-| [SteelCon](https://www.steelcon.info/)  | Sheffield | Awesome Hacking Con                      |
-| [DevSecCon](https://www.devseccon.com/) |  London   | DevSecOps focused annual event in London |
-| [Securi-Tay](https://securi-tay.co.uk/) |  Dundee   | Student run event in Dundee, Scotland    |
-
-### BSides
-
-As there are tons of BSides conferences in the UK, they are in their own list.
-
-| Name of Meetup                                      |  Location  | Description                                                                                |
-| :-------------------------------------------------- | :--------: | :----------------------------------------------------------------------------------------- |
-| [BSides London](https://www.securitybsides.org.uk/) |   London   | BSides is a community-driven event built for and by information security community members |
-| [BSides Manchester](https://www.bsidesmcr.org.uk/)  | Manchester | BSides event in Manchester                                                                 |
