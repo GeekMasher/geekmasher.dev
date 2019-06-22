@@ -22,7 +22,6 @@ One of the things I love doing in the evenings is going to meetups and annually 
 
 | Name of Meetup                                                       | Frequency |
 | :------------------------------------------------------------------- | --------: |
-| [DC44131](http://dc44131.org/)                                       |   Monthly |
 | [DevSecOps Manchester](https://www.meetup.com/DevSecOps-Manchester/) |   Monthly |
 
 ### Edinburgh, UK
