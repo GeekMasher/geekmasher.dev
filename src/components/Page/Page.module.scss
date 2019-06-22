@@ -22,6 +22,12 @@
     @include margin(0, 0, 1);
   }
 
+  table {
+    width: 100%;
+  }
+  tr {
+    margin: 18px;
+  }
 }
 
 @include breakpoint-sm {
@@ -31,19 +37,15 @@
     &__inner {
       padding: 30px 20px;
     }
-
   }
-
 }
 
 @include breakpoint-md {
   .page {
-    lost-column: 2/3;
+    lost-column: 7/10;
 
     &__inner {
       padding: 40px 35px;
     }
-
   }
-
 }
