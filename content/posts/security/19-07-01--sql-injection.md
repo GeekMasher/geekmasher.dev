@@ -12,11 +12,15 @@ tags:
   - SQL Injection
   - Injection Attacks
   - OWASP
+  - OWASP Cheat sheet
+  - Java
   - Mitigation
   - Protections
+  - Prepared Statements
   - Parameterized queries
-  - Escaping output
-description: "SQL Injection is one of the biggest issues that still plages web application development even to this day. If you don't know what this security issue is, this post is for you."
+  - Object Relationship-Mapping
+  - Frameworks
+description: "SQL Injection is one of the biggest issues that still plagues web application development even to this day. If you don't know what this security issue is, this post is for you."
 ---
 
 ![Programming software cyberspace](/media/programming-software-cyberspace.jpg)
@@ -178,7 +182,7 @@ Always check which functions you should be using and which functions you should 
 
 ## Conclusion
 
-SQL Injection is still after 20 plus years a plage for application developers even to this day.
+SQL Injection is still after 20 plus years a plague for application developers even to this day.
 Injection attacks are classed by OWASP as the number one issue facing applications developers and have been placed at number one in the [OWASP Top 10](https://www.owasp.org/index.php/Top_10-2017_A1-Injection) awareness project along with other injection attacks.
 
 Understanding what the issue is and how to prevent it along with understanding the risk associated with this vulnerability will lead you and your team to a better and most importantly, a securer application.
