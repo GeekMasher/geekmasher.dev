@@ -6,18 +6,6 @@
   padding: 0 15px;
   margin: 0 auto;
 
-  &__title {
-    font-size: $typographic-base-font-size * 2;
-    max-width: $layout-post-width;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 600;
-    text-align: center;
-    @include line-height(1.65);
-    @include margin-top(1);
-    @include margin-bottom(0)
-  }
-
   &__body {
     & figure {
       @include margin-bottom(1);
@@ -33,7 +21,7 @@
           font-size: $typographic-base-font-size * 1.6817;
           margin-top: 0;
           @include margin-bottom(1);
-          @include line-height(1.5)
+          @include line-height(1.5);
         }
 
       }

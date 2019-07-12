@@ -1,10 +1,14 @@
 ---
 title: Introduction to SQL Injection
-date: "2019-07-01T14:00:00.000Z"
+created: "2019-07-01T14:00:00.000Z"
 template: "post"
 draft: false
 slug: "/posts/security/sql-injection/"
 category: "InfoSec"
+banner:
+  path: /media/programming-software-cyberspace.jpg
+  caption: "Introduction to SQL Injection"
+  link: https://elements.envato.com/programmer-working-about-software-cyberspace-PP7NYZQ
 tags:
   - Security
   - InfoSec
@@ -23,14 +27,11 @@ tags:
 description: "SQL Injection is one of the biggest issues that still plagues web application development even to this day. If you don't know what this security issue is, this post is for you."
 ---
 
-![Programming software cyberspace](/media/programming-software-cyberspace.jpg)
-<!-- https://elements.envato.com/programmer-working-about-software-cyberspace-PP7NYZQ -->
-
 SQL Injection (AKA: SQLi) occurs when an application treats what should be the data sections of a SQL query as part of the executable section by escaping the data context of the query.
 This means that when the queries are executed, they can return data that it wasn't intending to be returned (dynamic SQL Injection) or return a turn or false statement (blind SQL Injection).
 
 Typically this occurs when creating dynamic queries by either concatenating or formatting strings to build these queries.
-These are then executed resulting in data being exfiltrated from the application to remote commands being run on the database leading to remote code execution. 
+These are then executed resulting in data being exfiltrated from the application to remote commands being run on the database leading to remote code execution.
 
 Here is an example of a vulnerable Java method where `username` is a parameter coming into the application from a user:
 
@@ -38,11 +39,11 @@ Here is an example of a vulnerable Java method where `username` is a parameter c
 // Get username from parameters
 String username = request.getParameter("username");
 // Create a statement from database connection
-Statement statement = connection.createStatement();  
+Statement statement = connection.createStatement();
 // Create unsafe query by concatenating user defined data with query string
 String query = "SELECT secret FROM Users WHERE (username = '" + username + "' AND NOT role = 'admin')";
 // ... OR ...
-// Insecurely format the query string using user defined data 
+// Insecurely format the query string using user defined data
 String query = String.format("SELECT secret FROM Users WHERE (username = '%s' AND NOT role = 'admin')", username);
 // Execute query and return the results
 ResultSet result = statement.executeQuery(query);
@@ -60,7 +61,7 @@ First, let's create a small table with some sample data for our users including 
 | 3    | mathew   | blogger | geek             |
 
 Let's create a baseline query that allows non-admin users to get their secret from our `Users` table.
-This means that when we supply `bob` as the username (dynamically supplied by the user) it will look like this: 
+This means that when we supply `bob` as the username (dynamically supplied by the user) it will look like this:
 
 ```sql
 SELECT secret FROM Users WHERE (username = 'bob' AND NOT role = 'admin')
@@ -80,7 +81,7 @@ This will now fail to return any results because although `alice` exists in the 
 Now let's set the username to `alice'`, using a single quote at the end of the username:
 
 ```sql
-SELECT secret FROM Users WHERE (username = 'alice'' AND NOT role = 'admin') 
+SELECT secret FROM Users WHERE (username = 'alice'' AND NOT role = 'admin')
 ```
 
 We now see that we have broken the syntax of the SQL query and most likely caused an error to be raised in the application.
@@ -136,7 +137,7 @@ There are other techniques applications can follow but we will not be discussing
 Using prepared statements is the primary way to prevent SQL Injection attacks from occurring.
 Applications can create queries using placeholders for the data sections of the query which are supplied as parameters/arguments.
 
-These functions make sure that there is a separation between the SQL executable query and the data being provided to the query which the database engine understands. 
+These functions make sure that there is a separation between the SQL executable query and the data being provided to the query which the database engine understands.
 
 An example of this would be using the `?` placeholder in the query below:
 
@@ -152,7 +153,7 @@ This would then be called using a parameterized method, here is an example in Ja
 // Get the username from parameter
 String username = request.getParameter("username");
 // Define query using a placeholder for username
-String query = "SELECT secret FROM Users WHERE (username = ? AND NOT role = 'admin')";  
+String query = "SELECT secret FROM Users WHERE (username = ? AND NOT role = 'admin')";
 // Creating a Prepared Statement
 PreparedStatement statement = connection.prepareStatement(query);
 // Set the first parameter to the value of `username`

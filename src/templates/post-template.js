@@ -32,10 +32,15 @@ export const query = graphql`
         tagSlugs
       }
       frontmatter {
-        date
+        created
+        updated
         description
         tags
         title
+        banner {
+          path
+          caption
+        }
       }
     }
   }
