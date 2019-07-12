@@ -17,6 +17,7 @@ One of the things I love doing in the evenings is going to meetups and annually 
 | [The Many Hats Club](https://www.meetup.com/The-Many-Hats-Club/)                                       |   Unknown |
 | [DC4420](https://dc4420.org/)                                                                          |   Monthly |
 | [LLHS Ladies of London Hacking Society](https://www.meetup.com/LLHS-Ladies-of-London-Hacking-Society/) |   Monthly |
+| [The Threat Modeling Meetup](https://www.meetup.com/The-Threat-Modeling-Meetup/) |   Unknown |
 
 ### Manchester, UK
 
