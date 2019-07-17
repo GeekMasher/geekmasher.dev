@@ -1,6 +1,7 @@
 ---
 title: Introduction to SQL Injection
 created: "2019-07-01T14:00:00.000Z"
+updated: "2019-07-17T14:00:00.000Z"
 template: "post"
 draft: false
 slug: "/posts/security/sql-injection/"
@@ -27,7 +28,7 @@ tags:
 description: "SQL Injection is one of the biggest issues that still plagues web application development even to this day. If you don't know what this security issue is, this post is for you."
 ---
 
-SQL Injection (AKA: SQLi) occurs when an application treats what should be the data sections of a SQL query as part of the executable section by escaping the data context of the query.
+SQL Injection (AKA: SQLi) occurs when an application treats data, usually user-input as part of the execution section of the SQL query.
 This means that when the queries are executed, they can return data that it wasn't intending to be returned (dynamic SQL Injection) or return a turn or false statement (blind SQL Injection).
 
 Typically this occurs when creating dynamic queries by either concatenating or formatting strings to build these queries.
@@ -94,16 +95,16 @@ Let's now try a small payload to modify the queries meaning to get Alice's secre
 SELECT secret FROM Users WHERE (username = 'alice' OR 1=1) --' AND NOT role = 'admin')
 ```
 
-Now we have changed the queries purpose with the inclusion of an `OR` statement allowing us to check if `1=1`, which if you are good at maths, know its a true statement.
+Now we have changed the queries purpose with the inclusion of an `OR` statement allowing us to check if `1=1` which is a true statement.
 
-The `--` is a SQL comment (might be different in other languages) which will comment out the rest of the query which we don't need so we end up with the following query:
+The `--` is a SQL comment (might be different in other database languages) which will comment out the rest of the query which we don't need so we end up with the following query:
 
 ```sql
 SELECT secret FROM Users WHERE (username = 'alice' OR 1=1)
 ```
 
 This time, the query returns Alice's secret as the query doesn't check if she's an admin before returning.
-This means we discovered that Alice's lives cat videos.
+This means we discovered that Alice's loves cat videos.
 
 This is a simple example but you can see that you could modify the query to do anything you want.
 You can also use [UNION](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) operations to obtain different data from other tables.
