@@ -34,7 +34,11 @@ describe('Post', () => {
           'test_0',
           'test_1'
         ],
-        title: 'test'
+        title: 'test',
+        banner: {
+          path: '/media/test.jpg',
+          caption: 'test'
+        }
       }
     }
   };

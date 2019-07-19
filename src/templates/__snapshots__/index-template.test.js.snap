@@ -216,6 +216,14 @@ exports[`IndexTemplate renders correctly 1`] = `
       <div
         className="page__body"
       >
+        <img
+          src="file"
+          style={
+            Object {
+              "marginBottom": "1rem",
+            }
+          }
+        />
         <div
           className="feed"
         >
