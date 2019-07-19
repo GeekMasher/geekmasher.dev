@@ -1,10 +1,15 @@
 ---
 title: GeekMasher.dev - My first post
-date: "2019-06-15T16:00:00.000Z"
+created: "2019-06-15T16:00:00.000Z"
+updated: "2019-06-15T16:00:00.000Z"
 template: "post"
 draft: false
 slug: "/posts/first-post/"
 category: "Development"
+banner:
+  path: /media/first-blog-banner-geekmasher.jpg
+  caption: "GeekMasher's First blog post"
+  link: https://elements.envato.com/blog-word-and-newspapers-PC6AD5P
 tags:
   - Development
   - GatsbyJS
@@ -14,9 +19,6 @@ tags:
   - FirstPost
 description: "This is my first post on my newly created blog at geekmasher.dev, please join my journey towards becoming a better developer and security engineer."
 ---
-
-![GeekMashers first post on geekmasher.dev](/media/first-blog-banner-geekmasher.jpg)
-<!-- https://elements.envato.com/blog-word-and-newspapers-PC6AD5P -->
 
 This is my first post on my newly created blog at [https://geekmasher.dev](https://geekmasher.dev), please join my journey towards becoming a better developer and security engineer.
 
@@ -51,5 +53,5 @@ GatsbyJS blog post on [how to deploy GatsbyJS to now](https://www.gatsbyjs.org/d
 
 ## Conclusion
 
-My `React`, `gatsbyjs`, and `now` stack is awesome and I highly recommend any one using it 
+My `React`, `gatsbyjs`, and `now` stack is awesome and I highly recommend any one using it
 
