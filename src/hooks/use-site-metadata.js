@@ -1,8 +1,9 @@
 // @flow
 import { useStaticQuery, graphql } from 'gatsby';
+import { get } from 'lodash';
 
 const useSiteMetadata = () => {
-  const { site } = useStaticQuery(
+  const meta = useStaticQuery(
     graphql`
       query SiteMetaData {
         site {
@@ -24,14 +25,14 @@ const useSiteMetadata = () => {
             title
             subtitle
             copyright
-            disqusShortname
           }
         }
       }
     `
   );
 
-  return site.siteMetadata;
+    console.log(meta);
+  return get(meta, 'site.siteMetadata');
 };
 
 export default useSiteMetadata;
