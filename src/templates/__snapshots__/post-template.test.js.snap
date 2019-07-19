@@ -17,13 +17,43 @@ exports[`PostTemplate renders correctly 1`] = `
       className="post__content"
     >
       <div
-        className="content"
+        className="banner"
+      >
+        <img
+          alt="test"
+          src="/media/test.jpg"
+        />
+        <p
+          className="banner__caption"
+        >
+          <i>
+            test
+          </i>
+        </p>
+        <div
+          className="meta"
+        >
+          <p
+            className="meta__date"
+          >
+            <b>
+              19 Jul 2019
+            </b>
+          </p>
+        </div>
+      </div>
+      <div
+        className="title"
       >
         <h1
-          className="content__title"
+          className="title__content"
         >
           test
         </h1>
+      </div>
+      <div
+        className="content"
+      >
         <div
           className="content__body"
           dangerouslySetInnerHTML={
@@ -34,17 +64,28 @@ exports[`PostTemplate renders correctly 1`] = `
         />
       </div>
     </div>
+    <hr />
     <div
       className="post__footer"
     >
       <div
-        className="meta"
+        className="author"
       >
         <p
-          className="meta__date"
+          className="author__bio"
         >
-          Published 
-          1 Sep 2016
+          Test bio
+          <a
+            className="author__bio-twitter"
+            href="https://www.twitter.com/#"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <strong>
+              Test name
+            </strong>
+             on Twitter
+          </a>
         </p>
       </div>
       <div
@@ -74,26 +115,6 @@ exports[`PostTemplate renders correctly 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-      <div
-        className="author"
-      >
-        <p
-          className="author__bio"
-        >
-          Test bio
-          <a
-            className="author__bio-twitter"
-            href="https://www.twitter.com/#"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <strong>
-              Test name
-            </strong>
-             on Twitter
-          </a>
-        </p>
       </div>
     </div>
     <div

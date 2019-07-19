@@ -17,7 +17,11 @@ module.exports = {
       tags: [
         'test_0',
         'test_1'
-      ]
+      ],
+      banner: {
+        path: '/media/test.jpg',
+        caption: 'test'
+      }
     }
   }
 };
