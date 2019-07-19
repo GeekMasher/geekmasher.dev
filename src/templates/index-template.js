@@ -56,7 +56,7 @@ export const query = graphql`
         limit: $postsLimit,
         skip: $postsOffset,
         filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } },
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { order: DESC, fields: [frontmatter___created] }
       ){
       edges {
         node {
@@ -66,9 +66,12 @@ export const query = graphql`
           }
           frontmatter {
             title
-            date
+            created
             category
             description
+            banner {
+              path
+            }
           }
         }
       }
