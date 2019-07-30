@@ -5,11 +5,29 @@ template: "page"
 
 One of the things I love going to annually security conferences so here is the list of events to take a look at:
 
+## United Kingdom
+
+| Name of Conferences                     |      Location |
+| :-------------------------------------- | ------------: |
+| [SteelCon](https://www.steelcon.info/)  | Sheffield, UK |
+| [DevSecCon](https://www.devseccon.com/) |    London, UK |
+| [44Con](https://44con.com/)             |    London, UK |
+| [Securi-Tay](https://securi-tay.co.uk/) |    Dundee, UK |
+
+## Europe
+
+| Name of Conferences                        |               Location |
+| :----------------------------------------- | ---------------------: |
+| [AppSecEU](https://ams.globalappsec.org/)  | Amsterdam, Netherlands |
+| [Chaos Computer Club](https://www.ccc.de/) |                Germany |
+| [Hardware IO](https://hardwear.io/)        |            Netherlands |
+| [hack.lu](https://2019.hack.lu/)           |             Luxembourg |
+| [GreHack](https://grehack.fr/)             |       Grenoble, France |
+
+## USA
+
 | Name of Conferences                      |       Location |
 | :--------------------------------------- | -------------: |
-| [SteelCon](https://www.steelcon.info/)   |  Sheffield, UK |
-| [DevSecCon](https://www.devseccon.com/)  |     London, UK |
-| [Securi-Tay](https://securi-tay.co.uk/)  |     Dundee, UK |
 | [BlackHat US](https://www.blackhat.com/) | Las Vegas, USA |
 | [Def Con](https://www.defcon.org/)       | Las Vegas, USA |
 
