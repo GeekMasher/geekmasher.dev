@@ -1,6 +1,10 @@
 ---
 title: "Security Meetups"
 template: "page"
+banner:
+    path: ../../media/entrepreneurs-and-business-people-conference-in.jpg
+    caption: "Networking at developer meetups and conferences"
+    link: https://elements.envato.com/entrepreneurs-and-business-people-conference-in-3SXUTJR
 ---
 
 One of the things I love doing in the evenings is going to meetups and annually to conferences so here is the list I have on security focused events.

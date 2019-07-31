@@ -64,6 +64,10 @@ export const query = graphql`
             description
             category
             title
+            banner {
+              path
+              caption
+            }
           }
         }
       }

@@ -9,6 +9,9 @@ module.exports = {
       copyright: 'Test copyright',
       disqusShortname: '',
       postsPerPage: 4,
+      banner: {
+        copyright: true
+      },
       menu: [
         {
           label: 'Test label 1',

@@ -213,14 +213,41 @@ exports[`CategoriesListTemplate renders correctly 1`] = `
     <div
       className="page__inner"
     >
-      <h1
-        className="page__title"
-      >
-        Categories
-      </h1>
       <div
         className="page__body"
       >
+        <div
+          className="banner"
+        >
+          <img
+            alt="Students in class"
+            src="/media/contemporary-student-in-class.jpg"
+          />
+          <p
+            className="banner__caption"
+          >
+            <i>
+              <a
+                href="https://elements.envato.com/contemporary-student-in-class-SZEG7DQ"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                © 
+                https://elements.envato.com/contemporary-student-in-class-SZEG7DQ
+              </a>
+            </i>
+          </p>
+          <div />
+        </div>
+        <div
+          className="title"
+        >
+          <h1
+            className="title__content"
+          >
+            Categories
+          </h1>
+        </div>
         <ul>
           <li>
             <a

@@ -9,8 +9,6 @@ import Pagination from '../components/Pagination';
 import { useSiteMetadata } from '../hooks';
 import type { PageContext, AllMarkdownRemark } from '../types';
 
-import banner from '../../static/media/hang-writing-blog-posts-at-geekmasher.jpg';
-
 type Props = {
   data: AllMarkdownRemark,
   pageContext: PageContext
@@ -35,9 +33,6 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
     <Layout title={pageTitle} description={siteSubtitle}>
       <Sidebar isIndex />
       <Page>
-        <img src={banner} style={{
-          marginBottom: '1rem'
-        }} />
         <Feed edges={edges} />
         <Pagination
           prevPagePath={prevPagePath}

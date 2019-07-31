@@ -24,7 +24,14 @@ exports[`Post renders correctly 1`] = `
         className="banner__caption"
       >
         <i>
-          test
+          <a
+            href="https://sample.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            © 
+            https://sample.com
+          </a>
         </i>
       </p>
       <div

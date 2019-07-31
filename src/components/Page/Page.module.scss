@@ -5,15 +5,7 @@
   @include margin-bottom(2);
 
   &__inner {
-    padding: 25px 20px;
-  }
-
-  &__title {
-    font-size: $typographic-base-font-size * 2.5;
-    font-weight: 600;
-    @include line-height(2);
-    @include margin-top(0);
-    @include margin-bottom(1.45);
+    padding-bottom: 20px;
   }
 
   &__body {

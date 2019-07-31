@@ -37,7 +37,8 @@ describe('Post', () => {
         title: 'test',
         banner: {
           path: '/media/test.jpg',
-          caption: 'test'
+          caption: 'test',
+          link: 'https://sample.com'
         }
       }
     }

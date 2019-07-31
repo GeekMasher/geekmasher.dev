@@ -25,13 +25,14 @@ const useSiteMetadata = () => {
             title
             subtitle
             copyright
+            banner {
+              copyright
+            }
           }
         }
       }
     `
   );
-
-    console.log(meta);
   return get(meta, 'site.siteMetadata');
 };
 

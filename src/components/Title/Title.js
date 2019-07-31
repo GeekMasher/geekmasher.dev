@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import moment from 'moment';
 import styles from './Title.module.scss';
 
 type Props = {

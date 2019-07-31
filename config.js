@@ -7,6 +7,9 @@ module.exports = {
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
+  banner: {
+    copyright: false
+  },
   menu: [
     {
       label: 'Articles',

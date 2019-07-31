@@ -20,7 +20,8 @@ module.exports = {
       ],
       banner: {
         path: '/media/test.jpg',
-        caption: 'test'
+        caption: 'test',
+        link: "https://example.com/test"
       }
     }
   }

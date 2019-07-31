@@ -27,7 +27,14 @@ exports[`PostTemplate renders correctly 1`] = `
           className="banner__caption"
         >
           <i>
-            test
+            <a
+              href="https://example.com/test"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              © 
+              https://example.com/test
+            </a>
           </i>
         </p>
         <div

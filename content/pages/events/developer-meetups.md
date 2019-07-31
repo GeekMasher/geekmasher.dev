@@ -1,6 +1,10 @@
 ---
 title: "Developer Meetups"
 template: "page"
+banner:
+    path: ../../media/entrepreneurs-and-business-people-conference-in.jpg
+    caption: "Networking at developer meetups and conferences"
+    link: https://elements.envato.com/entrepreneurs-and-business-people-conference-in-3SXUTJR
 ---
 
 ### London, UK

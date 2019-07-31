@@ -44,6 +44,7 @@ export const query = graphql`
         banner {
           path
           caption
+          link
         }
       }
     }

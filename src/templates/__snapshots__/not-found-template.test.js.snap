@@ -213,11 +213,6 @@ exports[`NotFoundTemplate renders correctly 1`] = `
     <div
       className="page__inner"
     >
-      <h1
-        className="page__title"
-      >
-        NOT FOUND
-      </h1>
       <div
         className="page__body"
       >

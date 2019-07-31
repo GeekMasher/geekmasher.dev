@@ -44,13 +44,14 @@ exports[`Feed renders correctly 1`] = `
       className="feed__item-description"
     >
       test_0
+      ... 
+      <a
+        className="feed__item-readmore"
+        href="/test_0"
+      >
+        Read More
+      </a>
     </p>
-    <a
-      className="feed__item-readmore"
-      href="/test_0"
-    >
-      Read
-    </a>
   </div>
   <div
     className="feed__item"
@@ -92,13 +93,14 @@ exports[`Feed renders correctly 1`] = `
       className="feed__item-description"
     >
       test_1
+      ... 
+      <a
+        className="feed__item-readmore"
+        href="/test_1"
+      >
+        Read More
+      </a>
     </p>
-    <a
-      className="feed__item-readmore"
-      href="/test_1"
-    >
-      Read
-    </a>
   </div>
 </div>
 `;

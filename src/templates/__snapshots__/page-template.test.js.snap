@@ -213,14 +213,41 @@ exports[`PageTemplate renders correctly 1`] = `
     <div
       className="page__inner"
     >
-      <h1
-        className="page__title"
-      >
-        test
-      </h1>
       <div
         className="page__body"
       >
+        <div
+          className="banner"
+        >
+          <img
+            alt="test"
+            src="/media/test.jpg"
+          />
+          <p
+            className="banner__caption"
+          >
+            <i>
+              <a
+                href="https://example.com/test"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                © 
+                https://example.com/test
+              </a>
+            </i>
+          </p>
+          <div />
+        </div>
+        <div
+          className="title"
+        >
+          <h1
+            className="title__content"
+          >
+            test
+          </h1>
+        </div>
         <div
           dangerouslySetInnerHTML={
             Object {

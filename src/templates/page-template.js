@@ -1,9 +1,12 @@
 // @flow
 import React from 'react';
 import { graphql } from 'gatsby';
+import { get } from 'lodash';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Page from '../components/Page';
+import Banner from '../components/Banner';
+import Title from '../components/Title';
 import { useSiteMetadata } from '../hooks';
 import type { MarkdownRemark } from '../types';
 
@@ -16,13 +19,18 @@ type Props = {
 const PageTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { html: pageBody } = data.markdownRemark;
-  const { title: pageTitle, description: pageDescription } = data.markdownRemark.frontmatter;
-  const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
+  const { title, description, updated } = data.markdownRemark.frontmatter;
+  const banner = get(data.markdownRemark.frontmatter, 'banner');
+  const metaDescription = description !== null ? description : siteSubtitle;
 
   return (
-    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} info={data.markdownRemark}>
+    <Layout title={`${title} - ${siteTitle}`} description={metaDescription} info={data.markdownRemark}>
       <Sidebar />
-      <Page title={pageTitle}>
+      <Page>
+        {banner !== undefined &&
+          <Banner banner={banner} updated={updated} />
+        }
+        <Title title={title} />
         <div dangerouslySetInnerHTML={{ __html: pageBody }} />
       </Page>
     </Layout>
@@ -38,6 +46,11 @@ export const query = graphql`
         title
         created
         description
+        banner {
+          path
+          caption
+          link
+        }
       }
     }
   }

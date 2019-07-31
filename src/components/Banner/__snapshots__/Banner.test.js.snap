@@ -12,7 +12,14 @@ exports[`Banner renders correctly 1`] = `
     className="banner__caption"
   >
     <i>
-      test
+      <a
+        href="https://testing.com/path"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        © 
+        https://testing.com/path
+      </a>
     </i>
   </p>
   <div
