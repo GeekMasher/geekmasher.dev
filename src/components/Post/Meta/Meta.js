@@ -8,9 +8,9 @@ type Props = {
   lastUpdated: string
 };
 
-const Meta = ({ publishDate, lastUpdated }: Props) => {
+const Meta = ({ created, updated }: Props) => {
 
-  const date = lastUpdated == undefined ? publishDate : lastUpdated;
+  const date = updated == undefined ? created : updated;
 
   return (
     <div className={styles['meta']}>

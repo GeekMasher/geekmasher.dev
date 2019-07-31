@@ -17,7 +17,7 @@ const Banner = ({ path, caption, created, updated }: Props) => (
     <p className={styles['banner__caption']}>
       <i>{caption}</i>
     </p>
-    <Meta publishDate={created} lastUpdated={updated} />
+    <Meta created={created} updated={updated} />
   </div>
 );
 

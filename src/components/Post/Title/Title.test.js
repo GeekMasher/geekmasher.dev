@@ -1,16 +1,15 @@
 // @flow
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Meta from './Meta';
+import Title from './Title';
 
-describe('Meta', () => {
+describe('Title', () => {
   it('renders correctly', () => {
     const props = {
-      created: '2019-05-01',
-      updated: '2019-06-01'
+        title: 'test'
     };
 
-    const tree = renderer.create(<Meta {...props} />).toJSON();
+    const tree = renderer.create(<Title {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

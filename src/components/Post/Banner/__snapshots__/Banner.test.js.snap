@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner renders correctly 1`] = `
+<div
+  className="banner"
+>
+  <img
+    alt="test"
+    src="/media/sample.jpg"
+  />
+  <p
+    className="banner__caption"
+  >
+    <i>
+      test
+    </i>
+  </p>
+  <div
+    className="meta"
+  >
+    <p
+      className="meta__date"
+    >
+      <b>
+        1 May 2019
+      </b>
+    </p>
+  </div>
+</div>
+`;
