@@ -17,7 +17,7 @@ describe('Feed', () => {
             ]
           },
           frontmatter: {
-            date: '2016-09-01',
+            created: '2019-05-01',
             description: 'test_0',
             category: 'test_0',
             tags: [
@@ -42,7 +42,7 @@ describe('Feed', () => {
             ]
           },
           frontmatter: {
-            date: '2016-09-01',
+            created: '2019-05-01',
             description: 'test_1',
             category: 'test_1',
             tags: [

@@ -22,7 +22,7 @@ describe('Layout', () => {
     title: 'test',
     info: {
       frontmatter: {
-        created: '2016-09-01',
+        created: '2019-05-01',
         tags: [
           'test_0',
           'test_1'

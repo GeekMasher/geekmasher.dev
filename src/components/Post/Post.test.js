@@ -29,7 +29,7 @@ describe('Post', () => {
         ]
       },
       frontmatter: {
-        date: '2016-09-01',
+        created: '2019-05-01',
         tags: [
           'test_0',
           'test_1'

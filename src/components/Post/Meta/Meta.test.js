@@ -6,7 +6,7 @@ import Meta from './Meta';
 describe('Meta', () => {
   it('renders correctly', () => {
     const props = {
-      date: '2016-09-01'
+      created: '2019-05-01'
     };
 
     const tree = renderer.create(<Meta {...props} />).toJSON();
