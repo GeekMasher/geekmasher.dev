@@ -227,9 +227,9 @@ exports[`CategoryTemplate renders correctly 1`] = `
             >
               <time
                 className="feed__item-meta-time"
-                dateTime="July 31, 2019"
+                dateTime="May 1, 2019"
               >
-                July 2019
+                May 2019
               </time>
               <span
                 className="feed__item-meta-divider"
@@ -276,9 +276,9 @@ exports[`CategoryTemplate renders correctly 1`] = `
             >
               <time
                 className="feed__item-meta-time"
-                dateTime="July 31, 2019"
+                dateTime="May 1, 2019"
               >
-                July 2019
+                May 2019
               </time>
               <span
                 className="feed__item-meta-divider"
