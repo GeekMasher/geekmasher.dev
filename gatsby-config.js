@@ -85,7 +85,8 @@ module.exports = {
                 }
               }
             `,
-          output: '/rss.xml'
+          output: "/rss.xml",
+          title: "geekmasher.dev Feed"
         }]
       }
     },
