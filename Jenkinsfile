@@ -4,23 +4,48 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Pre-Build') {
             steps {
                 sh "npm install"
-                sh "npm run build"
             }
         }
         stage('Test') {
+            parallel {
+                stage('Unit tests') {
+                    steps {
+                        sh "npm run test"
+                    }
+                }
+                stage('Linting') {
+                    steps {
+                        sh "npm run lint"
+                    }
+                }
+            }
+        }
+        stage('Build') {
             steps {
-                sh "npm run test"
+                sh "npm run build"
             }
         }
         stage('Deploy') {
-            when {
-                branch 'develop'
-            }
-            steps {
-                sh "npm run deploy"
+            parallel {
+                stage('Pre-Production') {
+                    when {
+                        branch 'develop'
+                    }
+                    steps {
+                        sh "now"
+                    }
+                }
+                stage('Production') {
+                    when {
+                        branch 'master'
+                    }
+                    steps {
+                        sh "npm run deploy"
+                    }
+                }
             }
         }
     }
