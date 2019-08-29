@@ -14,6 +14,9 @@ pipeline {
             }
         }
         stage('Deploy') {
+            when {
+                branch 'develop'
+            }
             steps {
                 sh "npm run deploy"
             }
