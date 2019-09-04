@@ -94,7 +94,7 @@
     "eslint-watch": "5.1.2",
     "flow-bin": "^0.98.1",
     "flow-typed": "^2.6.0",
-    "gh-pages": "2.0.1",
+    "gh-pages": "2.1.1",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.8.0",
     "jest-cli": "24.8.0",
