@@ -33,7 +33,7 @@
     "react"
   ],
   "dependencies": {
-    "bluebird": "^3.5.5",
+    "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "codecov": "^3.5.0",
     "gatsby": "^2.13.31",
