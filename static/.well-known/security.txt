@@ -1,0 +1,3 @@
+Contact: mailto:security@geekmasher.com
+Preferred-Languages: en
+Canonical: https://geekmasher.dev/.well-known/security.txt
