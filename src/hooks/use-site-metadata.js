@@ -25,6 +25,7 @@ const useSiteMetadata = () => {
             title
             subtitle
             copyright
+            disqus_short_name
             banner {
               copyright
             }

@@ -9,7 +9,7 @@ module.exports = {
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
     copyright: siteConfig.copyright,
-    disqusShortname: siteConfig.disqusShortname,
+    disqus_short_name: siteConfig.disqusShortname,
     menu: siteConfig.menu,
     author: siteConfig.author,
     banner: siteConfig.banner
@@ -187,5 +187,11 @@ module.exports = {
       }
     },
     'gatsby-plugin-flow',
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: siteConfig.disqus_short_name
+      }
+    }
   ]
 };

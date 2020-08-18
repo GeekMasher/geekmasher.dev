@@ -5,7 +5,7 @@ module.exports = {
   title: 'GeekMasher\'s Blog',
   subtitle: 'Development and Security focused blog by GeekMasher',
   copyright: '© All rights reserved.',
-  disqusShortname: '',
+  disqusShortname: 'geekmasher-dev',
   postsPerPage: 4,
   banner: {
     copyright: false

@@ -7,7 +7,8 @@
     "develop": "gatsby develop",
     "build": "gatsby build --prefix-paths",
     "now-build": "npm run build",
-    "deploy": "now --target production",
+    "deploy": "vercel",
+    "deploy:production": "vercel --prod",
     "clean": "rm -r .cache public",
     "lint:js": "eslint --cache --ext .js,.jsx .",
     "lint:scss": "stylelint \"src/**/*.scss\"",
@@ -39,6 +40,7 @@
     "gatsby": "^2.24.47",
     "gatsby-link": "^2.4.13",
     "gatsby-plugin-catch-links": "^2.3.11",
+    "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-feed": "^2.5.11",
     "gatsby-plugin-flow": "^1.3.11",
     "gatsby-plugin-google-gtag": "^1.2.1",
@@ -65,7 +67,6 @@
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "normalize-scss": "^7.0.1",
-    "now": "^15.8.7",
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-disqus-comments": "^1.4.0",
@@ -106,6 +107,7 @@
     "standard-version": "^9.0.0",
     "stylelint": "^13.6.1",
     "stylelint-config-recommended-scss": "3.3.0",
-    "stylelint-scss": "3.8.0"
+    "stylelint-scss": "3.8.0",
+    "vercel": "^19.2.0"
   }
 }
