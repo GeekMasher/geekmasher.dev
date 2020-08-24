@@ -112,6 +112,23 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           {
+            resolve: 'gatsby-remark-emojis',
+            options: {
+              // Deactivate the plugin globally (default: true)
+              active : true,
+              // Add a custom css class
+              class  : 'emoji-icon',
+              // Add custom styles
+              styles : {
+                display : 'inline',
+                margin : '0',
+                position : 'relative',
+                top : '5px',
+                width : '25px'
+              }
+            }
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               inlineCodeMarker: null,
