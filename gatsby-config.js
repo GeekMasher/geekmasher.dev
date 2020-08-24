@@ -209,6 +209,14 @@ module.exports = {
       options: {
         shortname: siteConfig.disqus_short_name
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-116474926-2",
+        head: true,
+        anonymize: true,
+      }
+    }   
   ]
 };
