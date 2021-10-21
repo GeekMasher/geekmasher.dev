@@ -1,0 +1,11 @@
+# https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
+default: true
+
+MD002:
+  level: 2
+
+MD013:
+  line_length: 128
+
+MD043:
+  headings: [ 'References' ]
