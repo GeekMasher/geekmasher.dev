@@ -143,9 +143,3 @@ Now you can create Markdown files and build an awesome looking slide deck built 
 
 
 
-
-
-
-
-
-
