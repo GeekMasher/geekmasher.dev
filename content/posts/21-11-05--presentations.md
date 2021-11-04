@@ -7,6 +7,7 @@ draft: false
 slug: "/posts/creating-presentations-using-marp"
 banner:
   path: /media/presentations-marp.png
+  caption: "Microsoft, Google, and Marp"
 tags:
   - Presentation
   - Slides
@@ -20,7 +21,7 @@ description: "Have you ever wanted to create a presentation that isn't a Power P
 During the past two month I volunteered to present at both [DC44131 (Edinburgh)](https://dc44131.org/) and [Abertay HackSoc](https://hacksoc.co.uk/) but I didn't want to use either Microsoft's Power Point (or Open Office) or Google's Slides.
 In the past I've tried to use RemarkJS but at the time I had some issues with it and decide to not check it out again for my presentation needs.
 
-[Hotline Bling Meme Presentation Marp](/media/memes/HotlineBling-Marp.jpg)
+![Hotline Bling Meme Presentation Marp](/media/memes/HotlineBling-Marp.jpg)
 
 For this project I used Markdown as the content format and [Marp](https://marp.app/) ([open-source](https://github.com/marp-team/marp)) as the core engine to build the slides into HTML and PDFs.
 
