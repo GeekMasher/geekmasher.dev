@@ -1,16 +1,18 @@
 ---
 title: Creating Presentations using Markdown and Marp
-created: "2021-10-29T14:00:00.000Z"
+created: "2021-11-05T14:00:00.000Z"
 template: "post"
 draft: false
-slug: "/posts/creating-presentations"
+slug: "/posts/creating-presentations-using-marp"
 banner:
-  path: /media/codeql-introduction.png
+  path: /media/presentations-marp.png
 tags:
   - Presentation
   - Slides
+  - Decks
   - Markdown
   - Marp
+  - JavaScript
 description: "Have you ever wanted to create a presentation that isn't a pptx or Google Sheet? Don't look any further then Markdown and Marp!"
 ---
 
@@ -177,8 +179,11 @@ I'll be choosing the latter as this gives me the simplicity of deploying the app
 Once setup and configured to your hearts content writing slides couldn't be easier.
 Now you can create Markdown files and build an awesome looking slide deck built using open source tools and work on any platform. 
 
+You can find the [source code on GitHub](https://github.com/GeekMasher/presentations) and [all my live presentations](https://presentations.geekmasher.dev/) using Marp.
 
 ## Resources
 
-
-
+- [Marp](https://marp.app/)
+- [`marp-cli`](https://github.com/marp-team/marp-cli)
+- [VSCode there is a plugin](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
+- [now.sh / vercel](https://now.sh)
