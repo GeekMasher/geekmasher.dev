@@ -1,6 +1,7 @@
 ---
 title: Creating Presentations using Markdown and Marp
 created: "2021-11-05T14:00:00.000Z"
+updated: "2021-11-05T14:00:00.000Z"
 template: "post"
 draft: false
 slug: "/posts/creating-presentations-using-marp"
