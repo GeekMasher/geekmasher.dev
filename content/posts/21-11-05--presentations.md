@@ -13,10 +13,10 @@ tags:
   - Markdown
   - Marp
   - JavaScript
-description: "Have you ever wanted to create a presentation that isn't a pptx or Google Sheet? Don't look any further then Markdown and Marp!"
+description: "Have you ever wanted to create a presentation that isn't a Power Point pptx or Google Sheet? Don't look any further then Markdown and Marp!"
 ---
 
-During the past two month I volunteer to present at both [DC44131 (Edinburgh)](https://dc44131.org/) and [Abertay HackSoc](https://hacksoc.co.uk/) but I didn't want to use either Microsoft's Power Point (or Open Office) or Google's Slides.
+During the past two month I volunteered to present at both [DC44131 (Edinburgh)](https://dc44131.org/) and [Abertay HackSoc](https://hacksoc.co.uk/) but I didn't want to use either Microsoft's Power Point (or Open Office) or Google's Slides.
 In the past I've tried to use RemarkJS but at the time I had some issues with it and decide to not check it out again for my presentation needs.
 
 For this project I used Markdown as the content format and [Marp](https://marp.app/) ([open-source](https://github.com/marp-team/marp)) as the core engine to build the slides into HTML and PDFs.
@@ -27,12 +27,12 @@ This project is [open source](https://github.com/geekmasher/presentations) and y
 ## Markdown and Git(Hub)
 
 First things first, using git to store and version control your slides is just awesome!
-No longer are we using NFS shares or FTP servers to store our code, why shouldn't your slides be any different.
+No longer are we using NFS shares or a FTP server to store our code, why shouldn't your slides be any different.
 
 Markdown is then a natural choice from there as it's simple and easy to use.
 Latex is great and a very powerful language and alternative but a little overkill for what I was looking.
 
-The finally part is using GitHub to publicly share the content of the slides to share my knowledge.
+The finally part is using GitHub to publicly share the content of the slides to share your knowledge.
 This also helps for creating drafts of slides, staging environment, and requesting people to review your content using [Pull Requests](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
 
 
@@ -180,6 +180,8 @@ Once setup and configured to your hearts content writing slides couldn't be easi
 Now you can create Markdown files and build an awesome looking slide deck built using open source tools and work on any platform. 
 
 You can find the [source code on GitHub](https://github.com/GeekMasher/presentations) and [all my live presentations](https://presentations.geekmasher.dev/) using Marp.
+I'm sure that this code will be updated and changed by the time you read this so do take a look are the source code.
+
 
 ## Resources
 
