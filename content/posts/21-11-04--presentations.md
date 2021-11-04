@@ -93,10 +93,10 @@ And the slide content...
 ```
 
 The underscore sets the directive for that one slide and if its removed that will apply to every slide until the directive is set again.
-
 There are other things to look into such as the following but these aren't as critical.
 
-<!-- TODO -->
+Once you have both the slides structured and understand some of the most important directives, you are ready to build your slides with the engine. 
+
 
 ## Marp!
 
@@ -110,18 +110,57 @@ npm install --save-dev @marp-team/marp-cli
 I recommend using NPM as this will be very useful for customisations.
 For those whom use [VSCode there is a plugin](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) that can be used to make highlighting and preview the slides.
 
-The CLI allows for a number of arguments which takes in markdown file(s) and outputs any format.
+The main use case of the CLI is to take Markdown files and produce a number of outputs (HTML, PDF, or even pptx).
+This can be done and allow us to quickly create a slide deck with very little effort.
 
-<!-- TODO: Customising Marp -->
+```bash
+marp --output "index.html" slides.md
+```
 
+Now that we can create a slide deck, lets customise our slides to the exact requirements we have.
+This requires some knowledge of JavaScript but shouldn't stop the simplest of changes to be done.
 
+There are two main elements I wanted for my slides;
 
+1. Able to create re-usable slides for many decks (about me)
+2. Custom blocks
+
+To do this we need to customise the Marp engine which can be done by passing in to the `--engine` argument a path to our own engine.
+I wont go over my code in detail but all you need to do is install and import all the plugins you want and make sure to export a Marp class object.
+
+[Source code](https://github.com/GeekMasher/presentations/blob/main/src/engine.js):
+
+```javascript
+// Import all the required libraries
+const { Marp } = require('@marp-team/marp-core');
+const markdownItContainer = require('markdown-it-container')
+const markdownItFootnote = require('markdown-it-footnote');
+const markdownItInclude = require('markdown-it-include');
+
+// Options for the `markdown-it-include`
+const optionsInclude = {
+    root: '.',
+    includeRe: /!include(.+)/,
+    bracesAreOptional: false
+};
+
+// Export module 
+module.exports = (opts) => new Marp(opts)
+    .use(markdownItFootnote)
+    .use(markdownItContainer, 'columns')
+    .use(markdownItInclude, optionsInclude)
+```
+
+The final result is a command that allows me to create HTML slides with a custom engine to allow me to do all I need.
 
 ```bash
 marp --engine ./src/engine.js \
     --no-stdin \
-    --output "index.html" index.md
+    --output "index.html" \
+    index.md
 ```
+
+*Side note:* I use the `--no-stdin` for now.sh due to Marp waiting for my Markdown to be passed into STDIN (known bug).
 
 
 ## Deployment
