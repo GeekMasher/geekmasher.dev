@@ -19,11 +19,11 @@ description: "Have you ever wanted to create a presentation that isn't a Power P
 ---
 
 During the past two month I volunteered to present at both [DC44131 (Edinburgh)](https://dc44131.org/) and [Abertay HackSoc](https://hacksoc.co.uk/) but I didn't want to use either Microsoft's Power Point (or Open Office) or Google's Slides.
-In the past I've tried to use RemarkJS but at the time I had some issues with it and decide to not check it out again for my presentation needs.
-
-![Hotline Bling Meme Presentation Marp](/media/memes/HotlineBling-Marp.jpg)
+In the past I've tried to use [RemarkJS](https://github.com/gnab/remark) but at the time I had some issues with it and decide to not check it out again for my presentation needs.
 
 For this project I used Markdown as the content format and [Marp](https://marp.app/) ([open-source](https://github.com/marp-team/marp)) as the core engine to build the slides into HTML and PDFs.
+
+![Hotline Bling Meme Presentation Marp](/media/memes/HotlineBling-Marp.jpg)
 
 This project is [open source](https://github.com/geekmasher/presentations) and you can find the slides at [presentation.geekmasher.dev](https://presentation.geekmasher.dev)
 
@@ -33,10 +33,10 @@ This project is [open source](https://github.com/geekmasher/presentations) and y
 First things first, using git to store and version control your slides is just awesome!
 No longer are we using NFS shares or a FTP server to store our code, why shouldn't your slides be any different.
 
-Markdown is then a natural choice from there as it's simple and easy to use.
-Latex is great and a very powerful language and alternative but a little overkill for what I was looking.
+[Markdown](https://guides.github.com/features/mastering-markdown/) is then a natural choice from there as it's simple and easy to use.
+[Latex](https://www.latex-project.org/get/) is great and a very powerful language and alternative but a little overkill for what I was looking.
 
-The finally part is using GitHub to publicly share the content of the slides to share your knowledge.
+The finally part is using [GitHub](https://github.com) to publicly share the content of the slides to share your knowledge.
 This also helps for creating drafts of slides, staging environment, and requesting people to review your content using [Pull Requests](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
 
 
@@ -60,7 +60,7 @@ More content for slide 2
 
 This allows for lots of slides to be split up and structure as per your requirements.
 
-Second are Marp directives which can be added at the top of the file or for each slide in the form of headers.
+Second are [Marp directives](https://marpit.marp.app/directives) which can be added at the top of the file or for each slide in the form of headers.
 Here is an example of some core (but not all) directives at the top of this slide:
 
 ```markdown
@@ -106,7 +106,7 @@ Once you have both the slides structured and understand some of the most importa
 
 ## Marp!
 
-Marp is the core technology used to create the slides deck from Markdown.
+[Marp](https://marp.app/) is the core technology used to create the slides deck from Markdown.
 This was extremely easy after installing the [`marp-cli`](https://github.com/marp-team/marp-cli) using npm or [other package managers](https://github.com/marp-team/marp-cli#use-package-manager).
 
 ```bash
@@ -190,6 +190,6 @@ I'm sure that this code will be updated and changed by the time you read this so
 ## Resources
 
 - [Marp](https://marp.app/)
-- [`marp-cli`](https://github.com/marp-team/marp-cli)
+- [marp-cli](https://github.com/marp-team/marp-cli)
 - [VSCode there is a plugin](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
 - [now.sh / vercel](https://now.sh)
