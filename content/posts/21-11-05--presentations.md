@@ -123,7 +123,7 @@ This can be done and allows us to quickly create a slide deck with very little e
 marp --output "index.html" slides.md
 ```
 
-Now that we can create a slide deck, lets customise our slides to the exact requirements we have.
+Now that we can create a slide deck, let's customise our slides to the exact requirements we have.
 This requires some knowledge of JavaScript but shouldn't stop the simplest of changes to be done.
 
 There are two main elements I wanted for my slides;
