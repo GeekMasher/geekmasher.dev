@@ -126,7 +126,7 @@ marp --output "index.html" slides.md
 Now that we can create a slide deck, let's customise our slides to the exact requirements we have.
 This requires some knowledge of JavaScript but shouldn't stop the simplest of changes to be done.
 
-There are two main elements I wanted for my slides;
+There are two main elements I wanted for my slides:
 
 1. Able to create re-usable slides for many decks (about me)
 2. Custom blocks
