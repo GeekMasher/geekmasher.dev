@@ -31,7 +31,7 @@ This project is [open source](https://github.com/geekmasher/presentations) and y
 ## Markdown and Git(Hub)
 
 First things first, using git to store and version control your slides is just awesome!
-No longer are we using NFS shares or a FTP server to store our code, why shouldn't your slides be any different.
+No longer are we using NFS shares or a FTP server to store our code - why shouldn't your slides be any different?
 
 [Markdown](https://guides.github.com/features/mastering-markdown/) is then a natural choice from there as it's simple and easy to use.
 [Latex](https://www.latex-project.org/get/) is great and a very powerful language and alternative but a little overkill for what I was looking.
