@@ -114,7 +114,7 @@ npm install --save-dev @marp-team/marp-cli
 ```
 
 I recommend using NPM as this will be very useful for customisations.
-For those whom use [VSCode there is a plugin](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) that can be used to make highlighting and preview the slides.
+For those who use [VSCode there is a plugin](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) that can be used to highlight and preview your slides before committing.
 
 The main use case of the CLI is to take Markdown files and produce a number of outputs (HTML, PDF, or even pptx).
 This can be done and allows us to quickly create a slide deck with very little effort.
