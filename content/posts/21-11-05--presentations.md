@@ -58,7 +58,7 @@ Content for slide 1 goes here.
 More content for slide 2
 ```
 
-This allows for lots of slides to be split up and structure as per your requirements.
+This allows for lots of slides to be split up and structured as per your requirements.
 
 Second are [Marp directives](https://marpit.marp.app/directives) which can be added at the top of the file or for each slide in the form of headers.
 Here is an example of some core (but not all) directives at the top of this slide:
