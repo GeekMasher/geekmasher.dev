@@ -42,7 +42,7 @@ This also helps for creating drafts of slides, staging environment, and requesti
 
 ### Structuring Markdown
 
-There is two main structural components to think about when creating your slides.
+There are two main structural components to think about when creating your slides.
 The first is the how to separate slides from each other by using the build in markdown separator / `---` syntax.
 This looks like the following:
 
