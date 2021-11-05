@@ -34,7 +34,7 @@ First things first, using git to store and version control your slides is just a
 No longer are we using NFS shares or a FTP server to store our code - why shouldn't your slides be any different?
 
 [Markdown](https://guides.github.com/features/mastering-markdown/) is then a natural choice from there as it's simple and easy to use.
-[Latex](https://www.latex-project.org/get/) is great and a very powerful language and alternative but a little overkill for what I was looking.
+[Latex](https://www.latex-project.org/get/) is great and a very powerful language alternative but a little overkill for what I was looking for.
 
 The finally part is using [GitHub](https://github.com) to publicly share the content of the slides to share your knowledge.
 This also helps for creating drafts of slides, staging environment, and requesting people to review your content using [Pull Requests](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
