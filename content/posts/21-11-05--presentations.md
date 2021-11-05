@@ -98,7 +98,7 @@ Example is the following for this slide:
 And the slide content...
 ```
 
-The underscore sets the directive for that one slide and if its removed that will apply to every slide until the directive is set again.
+The underscore sets the directive for that one slide and if it's removed that will apply to every slide until the directive is set again.
 There are other things to look into such as the following but these aren't as critical.
 
 Once you have both the slides structured and understand some of the most important directives, you are ready to build your slides with the engine. 
