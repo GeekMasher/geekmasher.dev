@@ -181,7 +181,7 @@ I'll be choosing the latter as this gives me the simplicity of deploying the app
 ## Conclusion
 
 Once setup, and configured to your heart's content, writing slides couldn't be easier.
-Now you can create Markdown files and build an awesome looking slide deck built using open source tools and work on any platform. 
+Now you can create Markdown files and build an awesome looking slide deck built using open source tools which will work on any platform. 
 
 You can find the [source code on GitHub](https://github.com/GeekMasher/presentations) and [all my live presentations](https://presentations.geekmasher.dev/) using Marp.
 I'm sure that this code will be updated and changed by the time you read this so do take a look are the source code.
