@@ -1,0 +1,137 @@
+
+body {
+    margin: 0px;
+    background-color: #eae8db;
+}
+a, nav.navigation a {
+    color: #8ac149;
+}
+p {
+    font-size: 1rem;
+}
+
+.profile {
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.profile .avatar {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+nav.navigation {
+    background-color: #eae8db;
+}
+#home-button {
+    float: left;
+    margin-left: 5rem;
+}
+nav.navigation a.button {
+    background: #8ac149;
+}
+#list-page, #single, #archive {
+    margin: 20px auto 0 auto;
+    max-width: 70rem;
+}
+
+.item img {
+    width: 100%;
+    margin: 15px;
+}
+
+#list-page .title {
+    display: inline-block;
+    color: #404040;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0;
+    width: 80%;
+}
+#list-page .date {
+    color: #404040;
+    font-size: 1.6rem;
+    width: 20%;
+    float: right;
+    text-align: right;
+    position: relative;
+    top: 1px;
+}
+#list-page .summary {
+    color: #757575;
+    font-size: 1rem;
+    margin: 0 3rem 1rem 3rem;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    margin-bottom: 36px;
+}
+
+.banner {
+    width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 0;
+}
+.banner img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100rem;
+}
+
+.banner figcaption {
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 95rem;
+}
+
+
+/* Particles
+ */
+
+/* https://fonts.google.com/specimen/Roboto+Mono#standard-styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+#particles-js {
+    background-color: #eae8db;
+    height: 300px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#title {
+    position: absolute;
+    color: #3a3a3a;
+    font-size: 4rem;
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+#typewriter-main {
+    position: absolute;
+    color: #3a3a3a;
+    font-size: 2.5rem;
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 7rem;
+}
+
+#typewriter-info {
+    position: absolute;
+    color: #3a3a3a;
+    font-size: 1.5rem;
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: center;
+    /* display: none; */
+    width: 100%;
+    height: 5rem;
+    margin-top: 12rem;
+}
+
