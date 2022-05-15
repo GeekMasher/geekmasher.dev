@@ -48,8 +48,8 @@ params:
       path: https://presentations.geekmasher.dev/
 
   customCSS:
-    - css/custom.css
+    - /css/custom.css
 
   customJS:
-    - js/particles_app.js
+    - /js/particles_app.js
 
