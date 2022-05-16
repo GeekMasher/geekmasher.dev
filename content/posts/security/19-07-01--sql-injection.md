@@ -1,9 +1,6 @@
 ---
 title: Introduction to SQL Injection
-created: "2019-07-01T14:00:00.000Z"
-updated: "2019-07-17T14:00:00.000Z"
-template: "post"
-draft: false
+date: "2019-07-01T14:00:00.000Z"
 slug: "/posts/security/sql-injection/"
 category: "InfoSec"
 banner:
@@ -25,7 +22,7 @@ tags:
   - Parameterized queries
   - Object Relationship-Mapping
   - Frameworks
-description: "SQL Injection is one of the biggest issues that still plagues web application development even to this day. If you don't know what this security issue is, this post is for you."
+summary: "SQL Injection is one of the biggest issues that still plagues web application development even to this day. If you don't know what this security issue is, this post is for you."
 ---
 
 SQL Injection (AKA: SQLi) occurs when an application treats data, usually user-input as part of the execution section of the SQL query.

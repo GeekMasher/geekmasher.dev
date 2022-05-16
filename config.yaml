@@ -1,0 +1,55 @@
+
+baseURL: https://geekmasher.dev
+languageCode: en-us
+title: GeekMasher's Blog
+theme: 
+   - github.com/nodejh/hugo-theme-mini
+
+defaultContentLanguage: en
+
+hasCJKLanguage: true
+permalinks:
+  posts: /posts/:title/
+
+paginate: 5
+
+# https://gohugo.io/getting-started/configuration-markup#
+markup:
+  highlight:
+    guessSyntax: true
+    style: emacs
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+  goldmark:
+    renderer:
+      unsafe: true
+
+social:
+  github: https://github.com/geekmasher
+  twitter: https://twitter.com/geekmasher
+
+enableEmoji: true
+enableGitInfo: true
+
+params:
+  author: GeekMasher
+  bio:  Securing Code, Developing Software, and All Things Technical
+  enableRSS: true
+  # enableComments: true
+  showToc: false
+  showPowerBy: false
+  math: false
+  hiddenPostSummaryInHomePage: false
+
+  links:
+    - name: Presentations 
+      path: https://presentations.geekmasher.dev/
+
+  customCSS:
+    - /css/custom.css
+
+  customJS:
+    - /js/particles_app.js
+

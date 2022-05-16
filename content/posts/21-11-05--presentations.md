@@ -1,9 +1,6 @@
 ---
 title: Creating Presentations using Markdown and Marp
-created: "2021-11-05T14:00:00.000Z"
-updated: "2021-11-05T14:00:00.000Z"
-template: "post"
-draft: false
+date: "2021-11-05T14:00:00.000Z"
 slug: "/posts/creating-presentations-using-marp"
 banner:
   path: /media/presentations-marp.png
@@ -15,7 +12,7 @@ tags:
   - Markdown
   - Marp
   - JavaScript
-description: "Have you ever wanted to create a presentation that isn't a Power Point pptx or Google Sheet? Don't look any further then Markdown and Marp!"
+summary: "Have you ever wanted to create a presentation that isn't a Power Point pptx or Google Sheet? Don't look any further then Markdown and Marp!"
 ---
 
 During the past two months I've volunteered to present at both [DC44131 (Edinburgh)](https://dc44131.org/) and [Abertay HackSoc](https://hacksoc.co.uk/) but I didn't want to use either Microsoft's Power Point (or Open Office) or Google's Slides.

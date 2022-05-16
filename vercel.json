@@ -1,17 +1,17 @@
 {
   "version": 2,
+  "public": true,
+  "github": {
+    "enabled": true
+  },
   "alias": [
     "geekmasher.dev"
   ],
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/static-build",
-      "config": {
-        "distDir": "public"
-      }
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.98.0"
     }
-  ],
+  },
   "headers": [
     {
       "source": "/(.*)",
