@@ -88,7 +88,6 @@ nav.navigation a.button {
     max-width: 95rem;
 }
 
-
 /* Particles
  */
 
@@ -134,4 +133,36 @@ nav.navigation a.button {
     height: 5rem;
     margin-top: 12rem;
 }
+
+
+/* Mobile Support
+ *
+ */
+@media only screen and (max-width: 768px) {
+    #title {
+        font-size: 2rem;
+    }
+    #typewriter-main {
+        font-size: 2rem;
+    }
+    #typewriter-info {
+        font-size: 1.2rem;
+    }
+    #list-page .title {
+        font-size: 1rem;
+        width: 70%;
+    }
+    #list-page .date {
+        font-size: 1rem;
+        width: 30%;
+    }
+    .item img {
+        margin: 0px;
+    }
+    #list-page .summary {
+         margin: 0 1rem 2rem 1rem;
+    }
+}
+
+
 
