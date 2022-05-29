@@ -1,38 +1,48 @@
 ---
 title: "Rocketing to the moon with Rocket and Rust"
 summary: "Rocket is a powerful and fast Web Framework for Rust. Lets learn how to use it for every day development"
-date: 2022-05-28
-slug: "/posts/dev/intro-rust-rocket/"
+date: 2022-05-29
+slug: "introduction-rust-rocket"
 banner:
-  path: /media/hang-writing-blog-posts-at-geekmasher.jpg
-  caption: "Envato Elements"
-  link: https://geekmasher.dev
+  path: /media/dev/rust/intro-rocket/banner.png
+  caption: "rocket.rs & Rocket"
+  link: https://rocket.rs/
 tags:
   - Development
+  - Programming
+  - Backend Development
+  - Web Framework
   - Rust
   - RustLang
   - Rocket
-  - Web Framework
+  - Tera
 
 ---
 
-Over the past 6+ months I have been writing a lot of [Rust](https://www.rust-lang.org/), an awesome programming language with the speed of near C or C++ performance but without all the security issues that come with it.
-One of the key spaces I wanted to try using Rust is in the Web Application / Web API space as most good languages must have a good way of building web applications.
+Over the past 6+ months, I have been writing a lot of [Rust](https://www.rust-lang.org/), an awesome programming language with the speed of near C or C++ performance but without all the security issues that come with it.
+One of the key spaces I wanted to try using Rust was in the web backend space since most languages must have an easy and fast way of building web applications.
 
-After looking online for "the best Rust web framework", there was two major choises; [Actix](https://actix.rs/) or [Rocket](https://rocket.rs/). 
-Both frameworks have very simuliar patterns unlike other languages like Python's Flask versus Django.
+After looking online for "the best Rust web framework", there were two major choices: [Actix](https://actix.rs/) or [Rocket](https://rocket.rs/). 
+Both of these web frameworks have very similar design patterns unlike other languages such as Python's Flask and Django which are very different.
 
-After much testing using both frameworks, I decided to go with Rocket as it supported some features I was looking for for an up coming project I was building (stay tuned for that one).
+After some testing using both frameworks, I decided to go with Rocket as it supported some features I was looking for, for an up coming project I am building (stay tuned for that one).
+Actix is a great framework despite its issues in the past ([see Ben Awad's 2020 video on the subject](https://www.youtube.com/watch?v=enLUX1TtNyE)), it's a blazing fast! web framework and comes with some nice features.
 
-*Note:* This blog post isn't on how to learn Rust so if you are looking for that, take a look at the [Rust Lang Book](https://doc.rust-lang.org/book/).
+[![blazing fast!](https://c.tenor.com/Hw0aKasI6B4AAAAC/fast-blazing-fast.gif#center)](https://www.youtube.com/c/ThePrimeagen)
+
+Now the introduction is over, lets write and launch ourselves a blazing fast web application!
+
+*Note: This blog post isn't about how to learn Rust, so if you are looking for that take a look at the [Rust Lang Book](https://doc.rust-lang.org/book/).*
+
+[All the source code for this project is on GitHub](https://github.com/GeekMasher/examples-rocket-introduction).
 
 
 ## Introduction to Rocket
 
-[Rocket](https://rocket.rs/) is a very fast web framework for Rust providing a powerful, flexible, and secure web framework.
-This also allows us to asynchronous code with use type safety built right into the framework.
+[Rocket](https://rocket.rs/) is a very fast web framework for Rust providing a powerful, flexible, and secure API.
+It also allows us to write asynchronous code with type safety built right into the language.
 
-Lets first of all create a new Cargo project for our test app.
+Let's first of all create a new Cargo project for our test app ([install Rust & Cargo here](https://www.rust-lang.org/tools/install)).
 
 ```bash
 # Create new cargo project
@@ -54,13 +64,15 @@ log = { version = "0.4", features = ["std", "serde"] }
 env_logger = "0.8.4"
 ```
 
-I'm installing version [`0.5.0-rc.2` (release candidate)](https://api.rocket.rs/v0.5-rc/rocket/index.html) versus [`0.4.10` (stable release)](https://api.rocket.rs/v0.4/rocket/index.html) as there are some nice features coming in the new version that I wanted to use.
-Please use either or for this tutorial.
-Alternatively, use the latest version if you are reading this in the future where mew releases are available.
+*Pro-tip:* [Use cargo-edit](https://crates.io/crates/cargo-edit) commands to add, update, remove or audit Cargo dependencies.
+
+I'm installing version [`0.5.0-rc.2` (release candidate)](https://api.rocket.rs/v0.5-rc/rocket/index.html) versus [`0.4.10` (stable release)](https://api.rocket.rs/v0.4/rocket/index.html) as there are some nice features coming in the new version that I want to use.
+Please use either/or for this tutorial.
+Alternatively, use the latest version if you are reading this in the future where new releases are available.
 
 Additional to installing Rocket, the snippet also installs [Serde (serializing and deserializing Rust data structures)](https://serde.rs/) and [`log` / `env_logger`](https://docs.rs/log/latest/log/) which can be used.
 
-Before we start writing our first bit of code, lets setup the `Rocket.toml` file in the root of the directory.
+Before we start writing our first bit of code, let's setup the `Rocket.toml` file in the root of the directory.
 
 ```toml
 [debug]
@@ -76,9 +88,9 @@ workers = 4
 log_level = "normal"
 ```
 
-This configuration isn't needed but has some really nice features build right into it such as log levels, interface to bind to, port numbers to use, etc. 
+This configuration isn't needed but has some really nice features built right into it, such as log levels, interface to bind to, port numbers to use, etc. 
 
-Now lets edit the `main.rs` to create our first route to the application.
+Now let's edit the `main.rs` to create our first route to the application.
 
 ```rust 
 #[macro_use] extern crate rocket;
@@ -101,20 +113,20 @@ fn rocket() -> _ {
 }
 ```
 
-Lets start by going over each part of the code.
+We'll start by going over each part of the code.
 
-**Imports and Marcos:**
+**Imports and Macros:**
 
 ```rust
 #[macro_use] extern crate rocket;
 use log::info;
 ```
 
-The first line tells Rust that we want to use the marcos from the Rocket crate in our crate / binary directly without having to import each feature.
+The first line tells Rust that we want to use the [macros](https://doc.rust-lang.org/book/ch19-06-macros.html) from the Rocket crate in our crate / binary directly without having to import each feature.
 These features are used heavily when building a Rocket application.
 
-The second line is us importing the `log` crate and in particular the `info!(...)` marco.
-This allows us to use a dedicated logger which is configurable versus using `println!(...)` marco which isn't configurable but great for debugging.
+The second line is us importing the `log` crate and, in particular, the `info!(...)` macro.
+This allows us to use a dedicated logger which is configurable versus using `println!(...)` macro which isn't configurable but great for debugging.
 
 **Defining a function as a Rocket route:**
 
@@ -125,9 +137,9 @@ fn index() -> &'static str {
 }
 ```
 
-The first line is an [Attribute Marco from Rocket](https://api.rocket.rs/v0.5-rc/rocket/attr.route.html) we imported from the Rocket crate.
+The first line is an [Attribute Macro from Rocket](https://api.rocket.rs/v0.5-rc/rocket/attr.route.html) we imported from the Rocket crate.
 In this case, we are defining a route with two rules.
-The first being that this route is a HTTP Get Method, and the second is the route path is `"/"` relative to the mount point (talk about this shortly).
+The first being that this route is a HTTP Get Method, and the second being the route path is `"/"` relative to the mount point (we'll talk about this shortly).
 
 This is annotated around a Rust function that can return various types as the responding data.
 In this example, a static str which is returned as `"Hello, world!"`
@@ -141,8 +153,8 @@ fn rocket() -> _ {
 }
 ```
 
-The first line is another [Attribute Marco](https://api.rocket.rs/v0.5-rc/rocket/attr.launch.html) which generates a `async fn main() { ... }` function stub of code for the application.
-Because of this, our applications code doesn't need a main function.
+The first line is another [Attribute Macro](https://api.rocket.rs/v0.5-rc/rocket/attr.launch.html) which generates a `async fn main() { ... }` function stub of code for the application.
+Because of this, our application's code doesn't need a main function.
 This attribute wraps our `rocket` function which acts like a "Rocket Builder".
 
 ```rust
@@ -151,26 +163,26 @@ info!("Ready to launch...");
 ```
 
 The next part sets up a logger for us using configurations from the environment. 
-After that, we simply use the `info!(...)` marco simular to a `println!(...)`.
+After that, we simply use the `info!(...)` macro similar to a `println!(...)`.
 
 ```rust
 rocket::build()
     .mount("/", routes![index])
 ```
 
-The final part of our code initialises a Rocket using the `rocket::build()` function which uses [a builder pattern](https://doc.rust-lang.org/1.0.0/style/ownership/builders.html) to construct the rocket.
+The final part of our code initialises a Rocket using the `rocket::build()` function which uses [a builder pattern](https://doc.rust-lang.org/1.0.0/style/ownership/builders.html) to construct the Rocket.
 This returns a [`Rocket` Struct](https://api.rocket.rs/v0.5-rc/rocket/struct.Rocket.html) which represents the web application.
 
-After the `build` function, we can call a number of functions which setup the rocket into the state we want.
-The one we are using in the [`mount()`](https://api.rocket.rs/v0.5-rc/rocket/struct.Rocket.html#method.mount) function which allows us to define a base path or `"/"` and a list of routes.
-These routes a wrapped in a Macro called [`routes![i1, i2, ...]`](https://api.rocket.rs/v0.5-rc/rocket/macro.routes.html) which returns a Vec of routes.
+After the `build` function, we can call a number of functions which setup the Rocket into the state we want.
+The one we are using is the [`mount()`](https://api.rocket.rs/v0.5-rc/rocket/struct.Rocket.html#method.mount) function which allows us to define a base path or `"/"` and a list of routes.
+These routes are wrapped in a macro called [`routes![i1, i2, ...]`](https://api.rocket.rs/v0.5-rc/rocket/macro.routes.html) which returns a Vec of routes.
 
-The relative path discussed before is append to the mounts base path.
+The relative path discussed before is appended to the mounts base path.
 So if you have a relative path of `/world` and a mount base path of `/hello` the route generated would be `/hello/world`.
 
-**Launching the rocket!:**
+**Launching the Rocket!**
 
-Now lets build and launch our rocket into orbit! 
+Now let's build and launch our rocket into orbit! 
 
 ```bash
 # optional
@@ -179,20 +191,24 @@ export RUST_LOG=info
 cargo run
 ```
 
+We can see the log output of the launched Rocket.
+
 ![cargo run log output](/media/dev/rust/intro-rocket/rocket-launch-logs.png)
 
-With that, we now you have a web application which returns "Hello, world!".
+*Pro-tip:* [Use cargo-watch](https://crates.io/crates/cargo-watch) to automatically run cargo commands when a project source files has been changed.
+
+With that, we now have a web application which returns "Hello, world!".
 
 ![hello world using rocket](/media/dev/rust/intro-rocket/rocket-index.png)
 
 This is great but a static string being passed from the backend to the end user isn't useful.
-Here is when we bring in Server Side Templating into the mix things up.
+Here is when we bring in Server Side Templating in to mix things up.
 
 
 ## Server Side Templating
 
-Now we have a great understanding of Rocket, lets add some HTML Server Side Templating into the mix.
-This is important for web applications so its useful for end users.
+Now we have a great understanding of Rocket, let's add some HTML Server Side Templating into the mix.
+This is important for web applications so it's useful for end users.
 We could use a front-end framework like ReactJS, VueJS, or Yew but for demo purposes this will work perfectly.
 
 We'll be using [Tera](https://tera.netlify.app/), a Jinja2 inspired template rendering engine.
@@ -206,8 +222,8 @@ First things first, lets add dynamic templates to our `Cargo.toml` file.
 rocket_dyn_templates = { version = "0.1.0-rc.1", features = ["tera"] }
 ```
 
-We can create a simple Tera template using [Bootstrap](https://getbootstrap.com/) (so its not plane HTML) and passing in a variables into the front-end.
-Lets first take a look at the Rust code first.
+We can create a simple Tera template using [Bootstrap](https://getbootstrap.com/) (so it's not plain HTML) and passing in variables into the front-end.
+Next,we'll take a look at the Rust code.
 
 ```rust
 use rocket_dyn_templates::{Template, context};
@@ -231,12 +247,16 @@ fn rocket() -> _ {
 }
 ```
 
-The `hello()` function uses the `get` Marco which now uses a parameter placeholder `<name>` to [define a dynamic parameter](https://rocket.rs/v0.5-rc/guide/requests/#dynamic-parameters).
-This is then automatically passed into the function by the Marco as a `&str`.
-As I wanted this variable to not be required, I made name a `Option` which then can be un-wrapped or use a default value `"World"`.
+The `hello()` function uses the `get` macro which now uses a parameter placeholder `<name>` to [define a dynamic parameter](https://rocket.rs/v0.5-rc/guide/requests/#dynamic-parameters).
+This is then automatically passed into the function by the macro as a `&str`.
+Since I wanted this variable to not be required, I made name an `Option` which then can be un-wrapped or use a default value `"World"`.
+The return type is a [`Template`](https://docs.rs/rocket_dyn_templates/0.1.0-rc.2/rocket_dyn_templates/struct.Template.html#) which is then processed by the Template Fairing which we'll talk about shortly.
 
-The `Template::render()` function comes from the [`rocket_dyn_templates`](https://api.rocket.rs/v0.5-rc/rocket_dyn_templates/index.html) crate allows us to specify the name of the Tera file template and the variables we want to pass in.
-The [`context`](https://api.rocket.rs/v0.5-rc/rocket_dyn_templates/macro.context.html) Marco which easily allows use to serialize the data for Tera to use.
+The `Template::render()` function which comes from the [`rocket_dyn_templates`](https://api.rocket.rs/v0.5-rc/rocket_dyn_templates/index.html) crate allows us to specify the name of the Tera file template and the variables we want to pass in.
+The [`context`](https://api.rocket.rs/v0.5-rc/rocket_dyn_templates/macro.context.html) macro easily allows us to serialise the data for Tera to use.
+
+The last bit that is required to get Tera templating working in attaching the [`Template::fairing()`](https://docs.rs/rocket_dyn_templates/0.1.0-rc.2/rocket_dyn_templates/struct.Template.html#method.fairing) to the Rocket.
+This allows us to use the Tera rendering engine or build a custom engine on any registered functions that return a Template.
 
 
 **`templates/index.html.tera`:**
@@ -270,8 +290,8 @@ The last thing to do is handle errors.
 
 ## Error Handling
 
-A small but important part of backend development is how to handle error and thankfully Rocket has us covered.
-You can `catch()` Attribute Marco to create a Catcher which when an error occurs either from a server side error (500) or a resource isn't available (4\*\*).
+A small but important part of backend development is how to handle errors and thankfully Rocket has us covered.
+You can `catch()` Attribute Macro to create a Catcher when an error occurs either from a server side error (500) or a resource that isn't available (4\*\*).
 
 ```rust
 // ...
@@ -304,15 +324,15 @@ fn rocket() -> _ {
 }
 ```
 
-The two functions `fn error_not_found()` and `fn fatal_error()` both handle different errors based on the error codes the `catch` Attribute has been set too.
+The two functions `fn error_not_found()` and `fn fatal_error()` both handle different errors based on the error codes the `catch` Attribute has been set to.
 All errors must be registered in the rocket build which is done using the [`register()` function](https://api.rocket.rs/v0.5-rc/rocket/struct.Rocket.html#method.register) passing in again a base route and Vec of errors.
-The Vec of error routes uses the [`catchers!` Macro](https://api.rocket.rs/v0.5-rc/rocket/macro.catchers.html).
+The Vec of error routes uses the [`catchers!` macro](https://api.rocket.rs/v0.5-rc/rocket/macro.catchers.html).
 
-If you now try and access a page that doesn't exist, now you receive this message:
+If you now try to access a page that doesn't exist, you receive this message:
 
 ![rocket not found error](/media/dev/rust/intro-rocket/rocket-error-not-found.png)
 
-If a panic occurs in any routes like it the `fn oops()` function, a error 500 is thrown and because we catch 500 errors with the `fn fatal_error()` we get the following access `/oops`:
+If a panic occurs in any routes like in the `fn oops()` function, an error 500 is thrown and because we catch 500 errors with the `fn fatal_error()` we get the following access `/oops`:
 
 ![panicking route](/media/dev/rust/intro-rocket/rocket-error-panic.png)
 
@@ -320,9 +340,16 @@ If a panic occurs in any routes like it the `fn oops()` function, a error 500 is
 ## Conclusion
 
 Rocket is an amazing framework which reminds me of a framework like Python's Flask which makes me very happy.
-There are tons of awesome features and [Sergio Benitez](https://github.com/SergioBenitez) (the creator and core maintainer of Rocket) along with [the Rocket community](https://github.com/SergioBenitez/Rocket/graphs/contributors) have created an awesome web framework.
+There are tons of awesome features which I've only started to dig into.
+
+[Sergio Benitez](https://github.com/SergioBenitez) (the creator and core maintainer of Rocket) along with [the Rocket community](https://github.com/SergioBenitez/Rocket/graphs/contributors) have created a great web framework!
+
+From now on when I'm writing a web backend application in Rust, I will be picking Rocket.
+
 
 ## References
 
-1. [Rocket]()
-
+1. [Source Code on GitHub](https://github.com/GeekMasher/examples-rocket-introduction)
+1. [Rocket web framework](https://rocket.rs/)
+2. [Rust programming language](https://www.rust-lang.org/)
+3. [Tera templating language](https://tera.netlify.app/)

@@ -10,6 +10,13 @@ p {
     font-size: 1rem;
 }
 
+img[src$='#center'] {
+    display: block;
+    margin: 1.0rem auto;
+    max-width: 100%;
+    height: auto;
+  }
+
 .profile {
     margin: 20px auto 0 auto;
     text-align: center;
@@ -163,6 +170,3 @@ nav.navigation a.button {
          margin: 0 1rem 2rem 1rem;
     }
 }
-
-
-
