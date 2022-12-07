@@ -13,13 +13,7 @@
 <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
 
 {{ range .Site.Params.customCSS }}
-  {{ if ( or ( hasPrefix . "http://" ) ( hasPrefix . "https://" ) ) }}
-    <!-- remote css -->
-    <link rel="stylesheet" href="{{ . }}">
-  {{ else }}
-    <!-- local css -->
-    <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
-  {{ end }}
+  <link rel="stylesheet" href="{{ . }}">
 {{ end }}
 
 <link rel="shortcut icon" href="{{ "/images/favicon.ico" | relURL }}" type="image/x-icon" />
