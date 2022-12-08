@@ -26,6 +26,8 @@ Something I noticed for most of the container security tools out there focus on 
 
 This is where Quibble was born!
 
+The source code is available on [GitHub](https://github.com/GeekMasher/quibble) and the project is available on [crates.io](https://crates.io/crates/quibble).
+
 ## What is Quibble?
 
 Quibble is a Rust based open-source container analysis tool that reads and assesses various security, quality and noteworthy things about your configuration and setup.
