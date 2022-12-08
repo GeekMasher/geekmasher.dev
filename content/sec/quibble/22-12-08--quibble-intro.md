@@ -59,7 +59,7 @@ Now, in some cases you may want this. This the case of my Homelab; I use [Traefi
 
 #### Extra Kernel Features
 
-Extra Kernel features might allow a compromised container to access features that typically containers shouldn’t have access to. This can include lower level Network or System access on the host. This comes in the form of `[cap_add](https://docs.docker.com/compose/compose-file/compose-file-v3/#cap_add-cap_drop)` and `[sysctls](https://docs.docker.com/compose/compose-file/compose-file-v3/#sysctls)` in compose files.
+Extra Kernel features might allow a compromised container to access features that typically containers shouldn’t have access to. This can include lower level Network or System access on the host. This comes in the form of [`cap_add`](https://docs.docker.com/compose/compose-file/compose-file-v3/#cap_add-cap_drop) and [`sysctls`](https://docs.docker.com/compose/compose-file/compose-file-v3/#sysctls) in compose files.
 
 This can be shown when using a VPN server container which needs access to certain networking features to tunnel / NAT traffic for incoming clients. See [Wireguard's Docker Compose file example](https://github.com/linuxserver/docker-wireguard/tree/master#docker-compose-recommended-click-here-for-more-info) or [PiHoles docs when using DHCP](https://github.com/pi-hole/docker-pi-hole#quick-start) for reference.
 
@@ -71,7 +71,7 @@ An example of this would be mounting in a Home directory and the container modif
 
 #### Untrusted Registries or Namespace
 
-This is subject to who you trust and allow to use. If you are using a container from an unknown registry like `[registry.malware.co](http://registry.malware.com)m/python:3.10` and you don’t own or it isn’t a registry you trust, you shouldn’t use it. The main question is which registries should you trust? This is the exact same issue with namespace, organisation, or username.
+This is subject to who you trust and allow to use. If you are using a container from an unknown registry like `registry.malware.com/python:3.10` and you don’t own or it isn’t a registry you trust, you shouldn’t use it. The main question is which registries should you trust? This is the exact same issue with namespace, organisation, or username.
 
 The focus on [Quibble in V0.1 is to focus on 2 main trusted sources](https://github.com/GeekMasher/quibble/blob/a3434a3eb5cc71c72f8f55ab9eb4c0d198122dac/src/compose/rules.rs#L49):
 
