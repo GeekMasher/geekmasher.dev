@@ -2,7 +2,6 @@
 title: "Quibble: Part 1 - Designing a Container Security Tool"
 summary: "Quibble is a container security tool I built to support my Homelab container setup using Docker and Podman compose! This is part 1 of a series to talk about the different components and features I will be building into Quibble"
 date: "2022-12-08"
-slug: "sec-quibble-introduction"
 banner:
   path: /media/sec/quibble/ComposeBlogPost.png
   caption: "Rust, Docker, Podman, and Cybersecurity Icon"
