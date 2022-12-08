@@ -35,7 +35,7 @@ writeText(
 
 writeText(
   "Developing Software",
-  "Python, Rust, and Go..."
+  "Python & Rust in Neovim..."
 )
 
 writeText(
