@@ -36,6 +36,7 @@ This allows you to see data from any node in the code base to any other nodes al
 This is a very useful technique when you are trying to debug a query and you are not sure where the data is coming from or where it is going to.
 If you are a security researcher and are trying to find a vulnerability in a piece of code, this can be very useful to see where the data is flowing to and from.
 
+Partial paths can be used in any languages that CodeQL supports, I will be using Python in this blog post as it is the language I am most familiar with.
 
 ## How do I use partial paths?
 
