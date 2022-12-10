@@ -17,8 +17,8 @@ tags:
 
 ---
 
-During my GitHub Personal Development on Friday this week I decided to write this blog post about debugging in CodeQL using a technique called partial paths.
-This is a technique that I have used in the past to debug queries and the CodeQL dataflow graph so I thought it would be a good idea to write a blog post about it.
+During my GitHub Personal Development this week, I decided to write this blog post about debugging in CodeQL using a technique called 'partial paths'.
+This is a technique that I have used in the past to debug queries and the [CodeQL](http://codeql.github.com/) [dataflow graph](https://en.wikipedia.org/wiki/Data-flow_diagram) so I thought it would be a good idea to write a blog post about it.
 Hopefully you find this useful and it helps you debug your own CodeQL databases as a security researcher.
 
 
@@ -31,10 +31,10 @@ If you want an introduction to CodeQL, I recommend reading my previous blog post
 ## What are partial paths?
 
 Partial paths are a way to debug CodeQL databases where you can see all the edges of the dataflow graph from a particular node.
-This allows you to see data from any node to any other nodes along with all of the edges connecting them that you might be interested in.
+This allows you to see data from any node in the code base to any other nodes along with all of the edges connecting them that you might be interested in.
 
 This is a very useful technique when you are trying to debug a query and you are not sure where the data is coming from or where it is going to.
-If you as a security researcher and are trying to find a vulnerability in a piece of code, this can be very useful to see where the data is flowing from and to.
+If you are a security researcher and are trying to find a vulnerability in a piece of code, this can be very useful to see where the data is flowing to and from.
 
 
 ## How do I use partial paths?
@@ -65,10 +65,10 @@ for func in my_funcs:
 ```
 
 This code is very simple and it is vulnerable to a command injection vulnerability from a local source of data.
-The source is coming from the `input()` function and it is being passed to the `foo()` function which finally being executed by `os.system()`.
+The source is coming from the `input()` function and it is being passed to the `foo()` function which is finally being executed by `os.system()`.
 
 The query that I am going to use to find this vulnerability is [the following in our GitHub Field repo](https://github.com/advanced-security/codeql-queries/blob/main/python/CWE-078/CommandInjectionLocal.ql).
-This is because CodeQL by default does not consider `input()` to be a source of user-controllable data as this is a local source of data versus remotely exploitable.
+This is because CodeQL by default does not consider `input()` to be a source of user-controllable data as this is a local source of data versus being remotely exploitable.
 
 If we run the code snippet above with some input we can see that the code is vulnerable to command injection:
 
@@ -88,7 +88,7 @@ So we can confirm that this is vulnerable to command injection but if we run the
 
 [![but why meme](https://media.tenor.com/KjJTBQ9lftsAAAAC/why-huh.gif#center)](https://media.tenor.com/KjJTBQ9lftsAAAAC/why-huh.gif)
 
-First thing to do is check the sources and sinks are both being detected correctly using the quick evaluation feature in VSCOde CodeQL Plugin:
+First thing to do is check the sources and sinks are both being detected correctly using the quick evaluation feature in the VSCOde CodeQL Plugin:
 
 *Sources:*
 
@@ -175,7 +175,7 @@ If you now look at the AST for the `func()` call you will see that CodeQL knows 
 
 ### Partial Paths from Sink
 
-So now we have traced from the source to the end of the last step we can now look at the same but in reverse.
+So now we have traced from the source to the end of the last step, we can now look at the same but in reverse.
 We might want to do it to ask the question "where does the data come from that leads to a sink?".
 
 Thankfully this is very easy to do using the following query:
@@ -229,8 +229,8 @@ Now if we run the query we get the following results:
 
 ![Partial Path Results](/media/sast/codeql-partial-path/codeql-pp-results-sinks.png)
 
-This is now giving us 8 results, this is because we are now looking for all of the possible nodes that lead to a sink we want to find.
-Lets take at some of the longer paths:
+This is giving us 8 results because we are looking for all of the possible nodes that lead to a sink we want to find.
+Let's take a look at some of the longer paths:
 
 ```python
 def foo(x):       # 1. -> ControlFlowNode for x (function definition)
@@ -240,7 +240,7 @@ x                 # 4. ->	ControlFlowNode for x (format string usage)
 f"{x}"            # 5. ->	ControlFlowNode for Fstring (format string expression)
 ```
 
-One thing to note is the order of the steps are not reverse and follow the same order as the source to sink path.
+One thing to note is the order of the steps are not reversed and follow the same order as the source to sink path.
 This is because the path is being traversed in the direction of the dataflow.
 
 The thing to note with this is we can see `foo(x)` is one of the sources of data and so `foo()` might not ever be called.
@@ -254,7 +254,7 @@ This part is a collection of tips and tricks I have found to be useful when usin
 
 ### Narrowing Down Sources and Sinks
 
-In our example we used `LocalSource`  and `CommandInjection::Sink` from the `CommandInjectionCustomizations` library.
+In our example we used `LocalSource`  and `CommandInjection::Sink` from the `CommandInjectionCustomizations` standard library.
 These are great but you might want to narrow the results down even more to a particular node in the codebase.
 
 This makes the query faster and more specific to the problem you are trying to solve.
@@ -278,9 +278,10 @@ class PartialPathConfig extends TaintTracking::Configuration {
 }
 ```
 
+
 ### Using All Vulnerable Sinks
 
-Similar to the above tip above but instead of using a specific sink from one QL library, we can use any number of sinks from CodeQL.
+Similar to the above tip but instead of using a specific sink from one QL library, we can use any number of sinks from CodeQL.
 
 This would look something like this:
 
@@ -309,10 +310,11 @@ class PartialPathConfig extends TaintTracking::Configuration {
 
 This means you can widen the scope of your query to find any of the vulnerable sinks in the codebase.
 
+
 ### Filter by Locations
 
 This is a tip I found when I was trying to find a specific path in a large codebase.
-Pinning the source or/and sink to a specific location can help narrow down the results.
+Pinning the source and/or sink to a specific location can help narrow down the results.
 
 You will need a predicate to find the node at a specific location.
 
@@ -343,7 +345,7 @@ This can help narrow down the results to a specific part of the codebase.
 
 Partial paths are a great way to debug and find new paths that lead to and from sources and sinks.
 We started with "CodeQL isn't finding this issue" to now knowing why CodeQL isn't finding the issue because of broken dataflow.
-This becomes super useful when you are trying to debug CodeQL queries and find paths that lead to a sinks that we weren't aware of.
+This becomes super useful when you are trying to debug CodeQL queries and find paths that lead to sinks that we weren't aware of.
 
 Today we are not going to look at how we can fix this and add additional flow steps to make CodeQL aware of the issue.
 If this is something you are interested in please let me know on [Twitter](https://twitter.com/geekmasher) or [Mastodon](https://infosec.exchange/@geekmasher) and I will write a follow up post.
