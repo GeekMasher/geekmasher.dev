@@ -79,21 +79,21 @@ You can find [a list of all the default plugins](https://github.com/ohmyzsh/ohmy
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
 plugins=(
     # Tools 
-	git,
-    docker,
-    kubectl,
-    tmux,
+	git
+    docker
+    kubectl
+    tmux
 
 	# OS
-	debian,
-    macos,
+	debian
+    macos
 
     # Programming Languages
-	rust,
-    python,
+	rust
+    python
 
 	# Misc
-    colored-man-pages,
+    colored-man-pages
 	web-search
 )
 ```
