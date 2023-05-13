@@ -15,7 +15,13 @@ img[src$='#center'] {
     margin: 1.0rem auto;
     max-width: 100%;
     height: auto;
-  }
+}
+
+.slides {
+    width: 100%;
+    height: auto;
+    min-height: 630px;
+}
 
 .profile {
     margin: 20px auto 0 auto;
