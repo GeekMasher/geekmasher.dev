@@ -2,7 +2,6 @@
 title: "Talk - 'Introduction to CodeQL' at DC44131"
 summary: "Local Defcon chapter talk on 'Introduction to CodeQL'"
 date: "2023-05-01T12:00:00.000Z"
-slug: "/talks/dc44131-introduction-to-codeql"
 banner:
   path: "/media/talks/2023-05-defcon.png"
   caption: "GeekMasher"
