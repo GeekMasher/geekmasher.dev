@@ -17,6 +17,11 @@ tags:
 
 ---
 
+**Update (Nov 2023):**
+
+⚠️ This post is [a little out of date as CodeQL uses the new parameterized modules](https://github.blog/changelog/2023-08-14-new-dataflow-api-for-writing-custom-codeql-queries/). Checkout the [updated queries here](https://github.com/GeekMasher/security-codeql/tree/main/python/debugging).
+
+
 During my GitHub Personal Development this week, I decided to write this blog post about debugging in CodeQL using a technique called 'partial paths'.
 This is a technique that I have used in the past to debug queries and the [CodeQL](http://codeql.github.com/) [dataflow graph](https://en.wikipedia.org/wiki/Data-flow_diagram) so I thought it would be a good idea to write a blog post about it.
 Hopefully you find this useful and it helps you debug your own CodeQL databases as a security researcher.
@@ -26,7 +31,6 @@ Hopefully you find this useful and it helps you debug your own CodeQL databases 
 
 I assume you have a basic understanding of CodeQL and how to write queries.
 If you want an introduction to CodeQL, I recommend reading my previous blog post [CodeQL Introduction](/posts/introduction-to-codeql-and-code-scanning).
-
 
 ## What are partial paths?
 
