@@ -2,7 +2,7 @@
 
 {{ if .Params.banner }}
 <figure class="banner">
-    <img src="{{ .Params.banner.path }}" alt="{{ .Params.banner.caption }}">  
+    <img src="{{ .Params.banner.path }}" alt="{{ .Params.banner.caption }}">
     <a href="{{ .Params.banner.link }}">
         <figcaption>© {{ .Params.banner.caption }}</figcaption>
     </a>
@@ -15,40 +15,47 @@
     <div class="tip">
         <time datetime="{{ .PublishDate }}">{{ i18n "publishDateFull" . }}</time>
         <span class="split">
-          ·
+            ·
         </span>
         <span>
-          {{ i18n "wordCount" . }}
+            {{ i18n "wordCount" . }}
         </span>
         <span class="split">
-          ·
+            ·
         </span>
         <span>
-          {{ i18n "minuteRead" . }}
+            {{ i18n "minuteRead" . }}
         </span>
     </div>
 
-    
+
     {{ if or .Site.Params.showToc .Params.showToc }}
-        {{ partial "toc.html" . }}
+    {{ partial "toc.html" . }}
     {{ end }}
 
 
     <div class="content">
-      {{ .Content }}
+        {{ .Content }}
+    </div>
+
+    <div id="donate" class="center">
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+            data-name="bmc-button" data-slug="geekmasher" data-color="#40DCA5" data-emoji="" data-font="Cookie"
+            data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff"
+            data-coffee-color="#FFDD00"></script>
     </div>
 
     {{ with .Params.tags }}
-        <div class="tags">
-            {{ range . }}
-                <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
-            {{ end }}
-        </div>
+    <div class="tags">
+        {{ range . }}
+        <a href="{{ " tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+    </div>
     {{ end}}
-    
+
+
     {{ partial "comment.html" . }}
 
 </section>
 
 {{ end }}
-
