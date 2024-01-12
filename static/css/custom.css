@@ -101,6 +101,15 @@ nav.navigation a.button {
     max-width: 95rem;
 }
 
+.tags {
+    text-align: center;
+}
+
+#donate {
+    text-align: center;
+    margin-top: 2rem;
+}
+
 /* Particles
  */
 
