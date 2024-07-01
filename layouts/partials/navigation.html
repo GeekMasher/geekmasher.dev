@@ -13,7 +13,7 @@
 
 	{{ if .OutputFormats.Get "RSS" }}
 	  {{ with .OutputFormats.Get "RSS" }}
-    <a class="button" href="{{ .RelPermalink }}">{{ with .Site.Params.subscribe }}{{ . }}{{ else }}{{ i18n "subscribe" }}{{ end }}</a>
+    <a class="button" href="{{ .RelPermalink }}">Subscribe</a>
 	  {{ end }}
 	{{ end }}
 </nav>
