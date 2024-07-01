@@ -36,6 +36,7 @@ enableGitInfo: true
 params:
   author: GeekMasher
   bio:  Securing Code, Developing Software, and All Things Technical
+  subscribe: true
   enableRSS: true
   # enableComments: true
   showToc: false

@@ -1,11 +1,13 @@
-
 body {
     margin: 0px;
     background-color: #eae8db;
 }
-a, nav.navigation a {
+
+a,
+nav.navigation a {
     color: #8ac149;
 }
+
 p {
     font-size: 1rem;
 }
@@ -34,17 +36,23 @@ img[src$='#center'] {
     height: 150px;
     border-radius: 50%;
 }
+
 nav.navigation {
     background-color: #eae8db;
 }
+
 #home-button {
     float: left;
     margin-left: 5rem;
 }
+
 nav.navigation a.button {
     background: #8ac149;
 }
-#list-page, #single, #archive {
+
+#list-page,
+#single,
+#archive {
     margin: 20px auto 0 auto;
     max-width: 70rem;
 }
@@ -62,6 +70,7 @@ nav.navigation a.button {
     margin: 0;
     width: 80%;
 }
+
 #list-page .date {
     color: #404040;
     font-size: 1.6rem;
@@ -71,6 +80,7 @@ nav.navigation a.button {
     position: relative;
     top: 1px;
 }
+
 #list-page .summary {
     color: #757575;
     font-size: 1rem;
@@ -85,6 +95,7 @@ nav.navigation a.button {
     margin: 2rem 0 0 0;
     padding: 0;
 }
+
 .banner img {
     display: block;
     margin-left: auto;
@@ -108,6 +119,10 @@ nav.navigation a.button {
 #donate {
     text-align: center;
     margin-top: 2rem;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* Particles
@@ -164,24 +179,30 @@ nav.navigation a.button {
     #title {
         font-size: 2rem;
     }
+
     #typewriter-main {
         font-size: 2rem;
     }
+
     #typewriter-info {
         font-size: 1.2rem;
     }
+
     #list-page .title {
         font-size: 1rem;
         width: 70%;
     }
+
     #list-page .date {
         font-size: 1rem;
         width: 30%;
     }
+
     .item img {
         margin: 0px;
     }
+
     #list-page .summary {
-         margin: 0 1rem 2rem 1rem;
+        margin: 0 1rem 2rem 1rem;
     }
 }
