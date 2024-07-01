@@ -2,7 +2,7 @@
 title: "Charity Half Marathon"
 summary: "I'm running a half marathon for charity in October 2024, and I need your help!"
 date: 2024-07-01
-slug: "half-marathon-for-charity"
+slug: "2024-half-marathon-for-charity"
 banner:
   path: /media/charity/2024-charity-half-marathon.webp
   caption: "People Running Marathon by Great Run Events 2023"
