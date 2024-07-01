@@ -12,6 +12,10 @@
 	<a href="{{ "/about" | relURL }}">{{ with .Site.Params.about }}{{ . }}{{ else }}{{ i18n "about" }}{{ end }}</a>
 
 	{{ if .Site.Params.enableRSS }}
-	  <a class="button" href="{{ .Site.RSSLink }}">{{ with .Site.Params.subscribe }}{{ . }}{{ else }}{{ i18n "subscribe" }}{{ end }}</a>
+	  {{ if .OutputFormats.Get "RSS" }}
+	    {{ with .OutputFormats.Get "RSS" }}
+    <a class="button" href="{{ .RelPermalink }}">{{ with .Site.Params.subscribe }}{{ . }}{{ else }}{{ i18n "subscribe" }}{{ end }}</a>
+	    {{ end }}
+	  {{ end }}
 	{{ end }}
 </nav>
